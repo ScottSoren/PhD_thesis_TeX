@@ -6,6 +6,11 @@
 \usepackage[final]{pdfpages}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{cite}
+
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,margin={1cm,1cm}}
+
 
 % Opponents: Beatriz Roldan Cuenya and Aliaksandr Bandarenka
 
@@ -14,10 +19,10 @@
 
 \pagenumbering{roman}
 
-\input{Decor/Title}
-\input{Decor/Abstract}
-\input{Decor/Foreword}
-\input{Decor/List_of_Papers}
+%\input{Decor/Title}
+%\input{Decor/Abstract}
+%\input{Decor/Foreword}
+%\input{Decor/List_of_Papers}
 
 \setcounter{tocdepth}{1}
 \tableofcontents\thispagestyle{empty}\clearpage
@@ -32,10 +37,15 @@
 
 %\input{03_Hydrogen/03_Hydrogen}\clearpage
 
-%\input{04_Oxygen/04_Oxygen}\clearpage
+\input{04_Oxygen/04_Oxygen}\clearpage
 
 %\input{05_Impact/05_Impact}\clearpage
 	
+
+\addcontentsline{toc}{chapter}{Bibliography} % sÃ¦tter
+\bibliographystyle{unsrt} 
+\bibliography{PhD_thesis.bib}
+
 %\input{Appendices/Appendices}\clearpage
 
 \end{document}

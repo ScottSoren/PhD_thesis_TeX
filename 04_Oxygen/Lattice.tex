@@ -1,0 +1,119 @@
+
+
+\section{To leave or to remain in the lattice}\label{sec:lattice_O}
+%\section{What goes in can be pulled out}
+
+In the previous section, I described the use of isotope-labeled electrolyte to take advantage of the low background signal for \ch{^{18}O2} and thus lower the overpotential at which electrochemically produced oxygen can be detected and quantified. In the final subsection, I used the lack of scrambling in \ch{^{16}O2}-saturated \ch{H2^{18}O} electrolyte to probe the rate-determining step of the OER an \ch{RuO2}. Both of these uses of isotope labeling in OER research are novel to the best of my knowledge. However, isotope labeling has been used extensively to probe another phenomenon: the involvement of lattice oxygen in the oxygen evolution reaction. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{04_Oxygen/fig/Strategies_diagram.png}
+	\caption{Three strategies for isotope-labeling experiments intended to detect lattice oxygen involvement in the OER, diagrammed for the case of vacuum-synthesized \ch{NiFe} nanoparticles. Taken from Paper \ref{Roy2018}. \textbf{(a)} Strategy A involves mass spectrometric detection of evolved \ch{O2} (EC-MS step) for an unlabeled catalyst in labeled electrolyte. \textbf{(b)} Strategy B involves electrochemical labeling of an OER catalyst followed by EC-MS in an un-labeled electrolyte. \textbf{(b)} Strategy C involves direct preparation (here by annealing in \ch{^{18}O2}) of a labeled electrocatalyst followed by EC-MS in an un-labeled electrolyte.}
+	\label{fig:strategies}
+\end{figure}
+
+\input{04_Oxygen/lattice_table}
+
+Table \ref{tab:lattice_lit} shows a list of such experiments reported in the literature. The studies go all the way back to some of the earliest DEMS studies in the 1980's but have accelerated in the past couple years. The experimental methods (catalyst preparation, isotope labeling technique, electrolyte, and isotope exchange experiment measurement technique) are included to aid comparison of the various studies. One clear characteristic of this compilation is that there is no convergence yet in the literature on the best way to conduct these lattice exchange experiments.
+
+The studies are approximately evenly split between DEMS or OLEMS for measuring the evolved oxygen isotopes. Most studies examine the oxygen evolved during potential sweeps (liniear sweep voltammatry, LSV) or cyclic voltammatry (CV), whereas only a few use constant-current measurements (CP). This is a problem because the redox changes during a potential sweep can destabilize electrode materials\cite{Kasian2016, Cherevko2016}, perhaps giving an isotope signal that would not be present in steady-state OER. Of those that measure a lattice oxygen evolution signal, some attempt to quantify the signal in terms of the total or surface oxygen loading of the catalyst\cite{Fierro2007, Surendranath2010, Diaz-Morales2013, Amin2017} whereas many observe an isotope signal but do not quantify it\cite{Wohlfahrt-Mehrens1987, Grimaud2017, Geiger2018}. 
+
+The experiments differ mostly on how the catalyst and electrolyte are isotope labeled. Broadly, there are three strategies:
+
+
+\begin{itemize}
+	\item A. The catalyst is prepared without any labeled oxygen. The lattice oxygen is thus 0.2\% \ch{^{18}O}. Oxygen evolution is then measured in labeled electrolyte with an increased \ch{^{18}O} concentration\cite{Wohlfahrt-Mehrens1987, Fierro2007, Macounova2009, Amin2017, Roy2018a}.
+	
+	\item B. The catalyst is originally prepared with the natural isotopic ratio, but then it is used for oxygen evolution in a labeled electrolyte. If the OER mechanism involves an exchange between the lattice oxygen and the electrolyte, this will result in labeling of the electrocatalyst with a \ch{^{18}O} concentration in the active lattice sites up to that of the electrolyte. This electrochemically labeled catalyst is then transferred to un-labeled electrolyte, and the isotopic composition of the evolved oxygen is measured.\cite{Willsau1985, Diaz-Morales2013, Stoerzinger2017a, Amin2017, Grimaud2017, Roy2018a}.
+	
+	\item C. The final strategy is to prepare the catalyst from the start with labeled oxygen, and then measure the isotopic composition of the the \ch{O2} evolved in labeled oxygen. Techniques to synthesize a labeled catalyst include electrodeposition in labeled electrolyte\cite{Surendranath2010}, heating a metal precursor in a \ch{^{18}O2} atmosphere\cite{Roy2018a}, and reactive sputtering with \ch{^{18}O2} in the sputtering plasma\cite{Geiger2018}.
+\end{itemize}
+
+These three strategies are illustrated schematically for the case of mass-selected nanoparticles in Figure \ref{fig:strategies}, taken from Paper \ref{Roy2018}. The coming Subsection motivates and describes the isotope labeling studies in that paper.
+
+\subsection{Determining the TOF in NiFe nanoparticles}
+
+As described in Subsection \ref{subsec:NiFe}, our group prepared a model system of vacuum-synthesized, mass-selected \ch{Ni_{0.75}Fe_{0.25}} nanoparticles in order to determine the turn-over frequency (TOF) of nickel-iron based electrodes for water oxidation in alkaline media. The full story is in Paper \ref{Roy2018}. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{04_Oxygen/fig/NiFe_redox_vs_surface.png}
+	\caption{Activity and redox feature of \ch{NiFeO_xH_y} nanoparticles in 1.0 M KOH. \textbf{(a)}, Turn-over frequencies using three different assumptions about the number of active sites, as a function of particle size. \textbf{(b)}, Cyclic voltammagrams of all samples used for the TOF measurements, zoomed in on the redox feature. \textbf{(c)}, The number of electrons transfered in this redox feature, normalized to the calculated number of surface atoms, as a function of particle size. Taken from Paper \ref{Roy2018}. (a) is from the main text and (b) and (c) are from the SI.}
+	\label{fig:redox_vs_surf}
+\end{figure}
+
+The activity of nanoparticles for a given (electro)catalytic reaction is influenced by the nanoparticle size\cite{Mistry2016b}. In general, the mass-normalized activity increases with smaller nanoparticle size, as the surface area to volume ratio of a particle increases with decreasing diameter. However, this is not always the case. If, for example, the reaction is most facile a specific type of surface site (for example, if terraces are more active than edges), then there can be an optimum in nanoparticle size. This appears to be the case, for example, in \ch{CO2} reduction to hydrocarbons on copper nanoparticles\cite{Reske2014} and oxygen reduction on platinum nanoparticles\cite{Hernandez-Fernandez2014}. Alternately, if the bulk of a material is active for a reaction, as has been suggested for NiFe-based OER catalysts\cite{Batchellor2015, Doyle2017}, then the mass-normalized activity would not vary with nanoparticle size.
+
+As mentioned in Subsection \ref{subsec:NiFe}, the cluster source synthesis enables us to know the exact mass and surface loading of each sample. Figure \ref{fig:redox_vs_surf}a shows the turn-over frequency at 1.53 V as a function of nanoparticle size vs RHE calculated with three different assumptions about the number of active sites: TOF$_{\text{bulk}}$ assumes all metal atoms are active, TOF$_{\text{surface}}$ assumes metal atoms on the outer surface of the nanoparticle are active, and TOF$_{\text{redox}}$ assumes one active site per electron transfered during the \ch{Ni^{2+}/Ni^{3+/4+}} redox couple just before the onset of OER. This redox couple is shown for all of the samples in the CV's in Figure \ref{fig:redox_vs_surf}b.
+
+Since TOF$_{\text{bulk}}$ (which is proportional to the mass-normalized activity) does indeed decrease with increasing nanoparticle size, we conclude that the bulk of these nanoparticles do not participate in the oxygen evolution reaction. On the other hand, the TOF$_{\text{surface}}$ and TOF$_{\text{redox}}$ do not show clear trends with nanoparticle size. This is consistent with each surface atom being an active site, or with each electron transferred during the redox wave representing an active site. For the electrodeposited NiFe LDH (also described in Subsection \ref{subsec:NiFe}), the exact loading was unknown and so only TOF$_{\text{redox}}$ is shown. This is lower than TOF$_{\text{redox}}$ for the nanoparticles, indicating either that the number of electrons transferred in the redox feature is not the best way to measure the number of active sites, or that the activity of the active sites differ for these two differently synthesized materials.
+
+Figure \ref{fig:redox_vs_surf}c shows the number of redox electrons per Ni atom (black, left y-axis) and per surface Ni atom (red, right y-axis). The latter is equal to the ratio between TOF$_{\text{surface}}$ and TOF$_{\text{redox}}$. For the smallest nanoparticles, the entire nanoparticle appears to be redox active, with approximately one redox electron transferred per nickel atom in the sample, whereas for the larger nanoparticles, there are fewer than 1 electron transferred per nickel atom, indicating that the particles have a redox-inactive core. There are three to five electrons transferred per surface Ni atom, indicating that the redox feature penetrates below the outer surface of the nanoparticles. The question is then whether the redox-accessible portion of the nanoparticle is also OER active. This is illustrated in Figure \ref{fig:NP_diagram}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{04_Oxygen/fig/NP_diagram.png}
+	\caption{Two competing models of the nickel redox feature and oxygen evolution in NiFe nanoparticles. \textbf{Left}, The redox-active near-surface region is permeable to \ch{OH-} and \ch{O2}, and contributes to the OER. \textbf{Right}, The redox-active near-surface region is only accessible by proton shuttling and does not contribute to OER. The diagram on the far left of a proposed layered structure for the redox-permeable NiFeOOH region is from Friebel, 2015, which is Reference \cite{Friebel2015}.}
+	\label{fig:NP_diagram}
+\end{figure}
+
+The question of whether the redox-active near-surface region contributes to OER is related to the question of which species carries the charge in and out of this region during the redox transition. If it is \ch{OH-}, then it is reasonable to believe that \ch{H2O} and \ch{O2} can also escape, and the near-surface region can contribute to the OER, which in alkaline electrolyte can be written
+
+\begin{equation}
+\ch{4 OH- -> O2 + 2 H2O + 4 e-}\,.\label{rxn:OER_alkaline}
+\end{equation}
+
+Unfortunately, the transport mechanism involved in the nickel redox feature is still not known\cite{Dionigi2016b}. It is often written by the nominal reaction 
+\begin{equation}
+\ch{Ni(OH)2 -> NiOOH + (H+ + e- )}\,,\label{rxn:Ni_redox}
+\end{equation}
+but in addition to protons, hydroxide and solvated cations have all been suggested as possible charge carriers\cite{WehrensDijksma2006}.
+
+We therefore sought to answer the question by another means. We reasoned that, if the redox-active subsurface region participated in the oxygen evolution reaction, then the \ch{H2O} and/or \ch{OH-} originally in that region would be oxidized to \ch{O2} which we could differentiate from oxidation of the bulk electrolyte by isotope labeling. We performed the three isotope-labeling procedures described in Figure \ref{fig:strategies} on mass-selected 7nm NiFe nanoparticles:
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=0.8\textheight]{04_Oxygen/fig/Roy2018_raw_results.png}
+	\caption{EC-MS results for isotope experiments on \textbf{(a-c)} NiFe NP’s (a, b, and c correspond to procedures A, B, and C in Figure \ref{fig:strategies}); and \textbf{(d)} an electrodeposited NiFe thin film and \textbf{(e)} an \ch{IrOx} thin film produced by thermal decomposition of \ch{HIrCl6} in air, by procedure A. The signal for \ch{O2} produced in the largest portion by oxidation of the electrolyte (m/z=36 for procedure A and m/z=32 for procedures B and C) is plotted on the right y-axis, and the other \ch{O2} isotope(s) on the left y-axis. m/z=32 is omitted as a minority isotope since it is dominated by the background due to residual natural \ch{O2}. (f) The excess minority isotope (\ch{^{16}O} for procedure A and \ch{^{18}O} for procedures B and C) is quantified and normalized to (solid bars, left y-axis) the number of surface atoms in the catalyst or to (hashed bars, right y-axis) the total \ch{O2} evolved during the part of the experiment shown here. From the SI of Paper \ref{Roy2018}}
+	\label{fig:Roy2018_raw_results}
+\end{figure}
+
+For procedure A, the as-synthesized nanoparticles were cycled between 0.5 V and 1.6 V vs RHE in un-labeled electrolyte, to form the hydrated redox-accessible near-surface region implied by Figure \ref{fig:redox_vs_surf}c. The sample was then transferred to the EC-MS setup, where the cell was filled with labeled electrolyte (0.1 M KOH in 97\% \ch{H2^{18}O}), and the potential was cycled up to where oxygen was evolved (1.55 V vs RHE). The advantage to procedure A is that there is no doubt about the initial isotopic composition of the oxygen in the catalyst, as the electrode has only been exposed to natural oxygen. The disadvantage is that the \ch{^{16}O} impurity in the labeled electrolyte limits the sensitivity. 
+
+For procedure B, the as-synthesized nanoparticles were cycled between 0.5 and 1.6 V vs RHE in labeled electrolyte. A disadvantage here is that there is inevitably less than perfect control over the isotopic composition of the electrocatalyst, since it must pass through natural air. We expect, as a worst case, that the oxygen in the catalyst consists of 50\% \ch{^{18}O}, due to formation of \ch{M^{16}O}, with M=\ch{Ni_{0.75}Fe_{0.25}}, when exposed to air and subsequent formation of \ch{M(^{16}OH)(^{18}OH)} when cycled in labeled electrolyte. This is indicated in Figure \ref{fig:strategies}.
+
+For procedure C, the as-synthesized nanoparticles were left in the vacuum chamber, where \ch{^{18}O2} was dosed and the sample was heated to 450$^\circ$C. The nanoparticles were thus already oxidized when taken out into air, and presumably retained a high degree of labeled isotopic purity and the nominal \ch{M^{18}O} formula. However, the sample was then put directly into the EC-MS setup with un-labeled electrolyte, where the nanoparticles likely hydrated to \ch{M(^{16}OH)(^{18}OH)} as illustrated. In hindsight, it would have been better to cycle the particles in labeled electrolyte prior to EC-MS testing to achieve a nominal \ch{M(^{18}OH)2} formula.
+
+In addition to the NiFe nanoparticles, we also tested an electrodeposited NiFe oxyhydroxide film (described in subsection \ref{subsec:NiFe}) in the same electorlyte, and an \ch{IrOx} material produced by thermal decomposition of \ch{HIrCl6}. The latter material was produced by dropcasting a solution of 5 mM \ch{HIrCl6} on a titanium stub and annealing in air at 500$^\circ$C for two hours. This is the same material tested for lattice exchange in Fierro et al, 2007, which is Reference \ref{Fierro2007}. In that study, the authors saw a significant amount of lattice oxygen evolution as an excess \ch{^{16}O} signal during the first cyclic voltammagrams in \ch{^{18}O}-labeled electrolyte (see Table \ref{tab:lattice_lit}). Both the NiFe oxyhydroxide electrodeposited film and the thermal decomposition \ch{IrOx} samples were tested according to Procedure a: They were prepared with the natural isotope ratio, and tested for lattice exchange in labeled electrolyte. The NiFe film was tested in 0.1 M KOH in 97\% \ch{H2^{18}O} like the NiFe nanoparticles. The \ch{IrOx} was tested in 1.0 M \ch{HClO4} in 97\% \ch{H2^{18}O}. The higher concentration of \ch{HClO4} meant that the final isotopic purity of the electrolyte was lower.
+
+The raw EC-MS results for these five isotope-labeling experiments (NP's procedure A-C, NiFe film and \ch{IrOx} procedure A) are shown in Figure \ref{fig:Roy2018_raw_results}a-e. 
+
+Here, a quick note on this plotting form: in this type of isotope labeling experiments, a ''positive'' result is an isotope signal originating from the electrocatalyst, namely a (transient) isotopic composition of the evolved \ch{O2} that cannot be explained by the composition of the electrolyte. A ''negative'' result, on the other hand, is one in which the isotopic composition of the evolved \ch{O2} always reflects the isotopic composition of the electrolyte. It therefore makes sense to plot the results in a way where deviations of the measured \ch{O2} signal and the expected \ch{O2} from oxidation of the electrolyte are clearly visible. After trying a few different plotting strategies, our group thinks that the best way to do so, without hiding any information, is to co-plot the MS signals, scaled according to the expected ratio. This can be done by multiplying one of the signals by the expected ratio, or by using two y-axes scaled according to the expected ratio. The latter technique is used in Figure \ref{fig:Roy2018_raw_results}a-e. In each case, the ''expected ratio'' was taken to be the background-corrected steady-state ratio during a constant-current OER measurement taken right after these cycles.
+
+When plotted this way, it is immediately clear that there is a very small amount of excess \ch{^{18}O} evolved in procedure B (Figure \ref{fig:Roy2018_raw_results}b) in the form of \ch{^{18}O2} (m/z=36) and \ch{^{18}O^{16}O} (m/z=34), a much larger amount of excess \ch{^{16}O} evolved from \ch{IrOx} (\ref{fig:Roy2018_raw_results}e) in the form of \ch{^{18}O^{16}O}, and little to no isotope signal in any of the other samples. 
+
+The astute reader may have noticed a rather important experimental mistake: each experiment starts with an anodic scan from OCP, but for the NiFe nanoparticles in both procedures A (Figure \ref{fig:Roy2018_raw_results}a) and C (Figure \ref{fig:Roy2018_raw_results}c), the first cycle does is not anodic enough to produce a significant \ch{O2} signal, and the sample is cycled through the Ni redox couple before a significant amount of \ch{O2} is evolved. If oxygenated species are transferred or mobile during that redox reaction, then the labeled intercallated \ch{OH-} or \ch{O2} might escape to the bulk electrolyte before . We were aware of this mistake while preparing the manuscript, but did not get a chance to repeat these experiments, which were quite challenging for two reasons: (1) The cluster source synthesis was expensive and demanding, and (2) The membrane chips used in the EC-MS experiments at the time were not alkaline-resistant, and so chips would often breach during the measurement. So, after much frustration, we decided to use this data. We concluded, however, that it did not influence the interpretation of the results, for the following reasons: (1) We figured that at least some of the \ch{O} species, such as those bound to nickel in \ch{OH} groups, would stay put during the redox reaction, and (2) The results for procedures A and C were broadly consistent with the results for procedure B (Figure \ref{fig:Roy2018_raw_results}b) and for the electrodeposited film (Figure \ref{fig:Roy2018_raw_results}c). In hindsight, this mistake is part of the simpler and more general mistake of using potential scans rather than constant-potential or (even better) constant-current
+
+Even if this experimental mistake weakens the conclusion that the redox-active near-surface region does not participate in the OER, it does not invalidate these experiments as evidence for the other conclusion of the isotope-labeling experiments: lattice oxygen is not exchanged during the oxygen-evolution reaction. This is based on an assumption that lattice oxygen is not exchanged during the (near-)surface redox reaction. This may even be used as a definition for lattice oxygen.
+
+
+
+
+\subsection{A contradiction}
+
+The attentive reader may have noticed a contradiction:
+
+In Section \ref{sec:low_O2}, I noted that the acid-electrolyte OER activities of all \ch{RuO2} films and \ch{Ru} foams converged when normalized to the capacitance of the films, which I pointed out is consistent with an assumption that all of the surface area accessible to the electrolyte for active charging is also active for the oxygen evolution reaction. However, in Paper \ref{Roy2018}, we argue that only the outer surface of the nanoparticles is active for alkaline-electrolyte OER, even though the Ni redox feature penetrates $\approx$ 3-5 monolayers into the nanoparticles. We motivate this argument by isotope-labeling studies that always show \ch{O2} with the same isotopic composition as that of the electrolyte, reasoning that OER activity below the surface would either involve lattice oxygen evolution or oxidation of low-mobility intercalated water. We hypothesize that the redox activity below the surface is only due to proton shuttling.
+
+This contradiction is especially troubling in consideration of the fact that unlabeled \ch{RuO2} films also do not give an isotope signal during OER in isotope-labeled electrolyte. I.e., sputtered \ch{RuO2} also gives a negative result to Strategy A in Figure \ref{fig:strategies}). Apparently, the water in the porous structure of high-surface-area \ch{Ru} and \ch{RuO2} has no trouble diffusing out of the pores before the onset of OER, unlike our assumption for NiFe oxyhydroxide.
+
+One motivation for these differing lines of reasoning for the two materials is that the porosity is on a different scale: whereas the nanoscale domains and cavities in hydrous \ch{RuO2} are on the order of a few nanometers\cite{Yoshida2013}, the spacing between the layers in \ch{NiFe} layered double hydride are only 0.4 to 0.8 nanometers apart and perhaps interconnected by hydrogen bonds, depending on the phase\cite{Dionigi2016b}. Thus, there is more room for water and other species to diffuse in and out of amorphous \ch{RuO2}. Another is the TEM images of the NiFe nanoparticles (Paper \ref{Roy2018}, Figure 4) which indicate that they are non-porous both before and after the reaction (unfortunately, we do not have TEM images on the sputtered \ch{RuO2} films).
+
+Nonetheless, the uncertainty evident in this contradiction, together with the imperfections mentioned above of the isotope experiments in Paper \ref{Roy2018}, mean that the conclusion of no OER activity in the redox-active near-surface region should be taken with a grain of salt. We think that these issues should motivate research into the charge transfer and mass transport processes during redox processes at the oxide-electrolyte interface for oxygen evolution catalysts. A better understanding of these transport processes is essential for determining the number of sites that participate in the oxygen evolution reaction, which in turn is essential for developing catalysts with improved intrinsic activity\cite{Kibsgaard2019}. 
+
+
+
+\subsection{Labeled \ch{RuO2} and \ch{IrO2} films}
+
+\subsection{Using CO to get out the lattice oxygen}

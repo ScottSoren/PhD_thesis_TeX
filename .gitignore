@@ -1,6 +1,13 @@
 *.log
+*.out
 *.toc
 *.aux
+*.bbl
+*.out
+*.blg
 *.pdf
 *.gz
 *.png
+*.ppt
+*.pptx
+*.odp
