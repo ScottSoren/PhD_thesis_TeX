@@ -1,0 +1,85 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\usepackage{mhchem}
+\usepackage{nicefrac}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\begin{document}
+
+\begin{align}
+\text{ H$_2$\textbf{$^{16}$O} + H$_2$\textbf{$^{16}$O}  } &\rightarrow \text{ \textbf{{$^{16}$O$_2$}} + 4(H$^{+}$  + e$^{-}$) }  && \nicefrac{m}{z} = 32\\
+\text{ H$_2$\textbf{$^{16}$O} + H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}} } &\rightarrow \text{ \textbf{$^{16}$O \textcolor{OliveGreen}{$^{18}$O}} + 4(H$^{+}$  + e$^{-}$) }  && \nicefrac{m}{z} = 34\\
+\text{ H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}} + H$_2$\textbf{$^{16}$O}  } &\rightarrow \text{ \textbf{\textcolor{OliveGreen}{$^{18}$O}$^{16}$O } + 4(H$^{+}$  + e$^{-}$) }  && \nicefrac{m}{z} = 34\\
+\text{ H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}} + H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}}  } &\rightarrow \text{ \textbf{\textcolor{OliveGreen}{$^{18}$O}}$_2$ + 4(H$^{+}$  + e$^{-}$) }  && \nicefrac{m}{z} = 36
+\end{align}
+
+
+\begin{align}
+\ce{C^{16}O2 + H2\!^{18}O &->[\hat{r}_1] H2C\!^{18}O\!^{16}O2} && m/z=44 \rightarrow  \\
+\ce{H2C\!^{18}O\!^{16}O2 &->[\infty] H2\!^{18}O + C^{16}O2} && \frac{1}{3} \hspace{3mm} m/z=44 \\
+\ce{H2C\!^{18}O\!^{16}O2 &->[\infty] H2\!^{16}O + C^{18}O^{16}O } && \frac{2}{3} \hspace{3mm} m/z=46
+\end{align}
+
+\begin{align}
+\ce{C^{18}O^{16}O + H2\!^{18}O &->[\hat{r}_2] H2C\!^{18}O2\!^{16}O} && m/z=46 \rightarrow \\
+\ce{H2C\!^{18}O2\!^{16}O &->[\infty] H2\!^{18}O + C^{18}O^{16}O } && \frac{2}{3} \hspace{3mm} m/z=46 \\
+\ce{H2C\!^{18}O2\!^{16}O &->[\infty] H2\!^{16}O + C^{18}O2} && \frac{1}{3} \hspace{3mm} m/z=48
+\end{align}
+
+\begin{align}
+\ce{C^{18}O^{16}O + H2\!^{16}O &->[\hat{r}_3] H2C\!^{18}O\!^{16}O2} && m/z=46 \rightarrow \\
+\ce{H2C\!^{18}O\!^{16}O2 &->[\infty] H2\!^{18}O + C^{16}O2} && \frac{1}{3} \hspace{3mm} m/z=44 \\
+\ce{H2C\!^{18}O\!^{16}O2 &->[\infty] H2\!^{16}O + C^{18}O^{16}O } && \frac{2}{3} \hspace{3mm} m/z=46
+\end{align}
+
+\begin{align}
+\ce{C^{18}O2 + H2\!^{16}O &->[\hat{r}_4] H2C\!^{18}O2\!^{16}O} && m/z=48 \rightarrow \\
+\ce{H2C\!^{18}O2\!^{16}O &->[\infty] H2\!^{18}O + C^{18}O^{16}O } && \frac{2}{3} \hspace{3mm} m/z=46 \\
+\ce{H2C\!^{18}O2\!^{16}O &->[\infty] H2\!^{16}O + C^{18}O2} && \frac{1}{3} \hspace{3mm} m/z=48
+\end{align}
+
+
+\begin{equation}
+K = \frac{c_{\ce{H2CO3}}}{c_{\ce{CO2}}} = 1.7 \cdot 10^{-3}
+\end{equation}
+
+\begin{equation}
+x = \frac{c_\text{H$_2$\textbf{$^{16}$O}}}{c_\text{H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}}} + c_\text{H$_2$\textbf{$^{16}$O}}} = \frac{r}{2+r} = 2.52\%
+\end{equation}
+
+\begin{equation}
+x = \frac{c_\text{H$_2$\textbf{$^{16}$O}}}{c_\text{H$_2$\textbf{\textcolor{OliveGreen}{$^{18}$O}}} + c_\text{H$_2$\textbf{$^{16}$O}}} = 27.1\%
+\end{equation}
+
+\begin{equation}
+r =  \frac{j_\text{\textbf{$^{16}$O\textcolor{OliveGreen}{$^{18}$O}}}}{j_\text{\textbf{\textcolor{OliveGreen}{$^{18}$O$_2$}}}} = \frac{S_\text{M34}}{S_\text{M36}} = 5.16\%
+\end{equation}
+
+\begin{equation}
+\left( \begin{array}{c}  S_\text{M32} \\ S_\text{M34}\\ S_\text{M36} 
+\end{array}  \right)
+= 
+\left( \begin{array}{c}  j_\text{\textbf{{$^{16}$O$_2$}}} \\ j_\text{\textbf{$^{16}$O\textcolor{OliveGreen}{$^{18}$O}}} \\ j_\text{\textbf{\textcolor{OliveGreen}{$^{18}$O$_2$}}} 
+\end{array}  \right)
+= 
+\left( \begin{array}{c}  x^2 \\ 2x(1-x)\\ (1-x)^2 
+\end{array}  \right)
+\end{equation}
+
+\begin{equation}
+\frac{\mathrm{d}}{\mathrm{d} t} \left( \begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{48} 
+\end{array}  \right) = k \left( \begin{array}{c c c}   -\frac{2}{3}(1-x) & + \frac{1}{3}x & 0 \\  \frac{2}{3}(1-x) & + -\frac{1}{3} & \frac{2}{3}x \\  0 & \frac{1}{3}(1-x) & -\frac{2}{3}x
+\end{array}  \right) \left(\begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{48} 
+\end{array}  \right)
+\end{equation}
+\begin{equation}
+\left(\begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{48} 
+\end{array}  \right)_0 = \left(\begin{array}{c}  x \\ 1-x \\ 0 
+\end{array}  \right)
+\end{equation}
+
+
+\end{document}
