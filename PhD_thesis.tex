@@ -1,25 +1,37 @@
-\documentclass{report}
+%\documentclass[11pt,a4paper,twoside]{report} % in my MSc Thesis
+\documentclass[twoside]{book} % in Daniel's PhD Thesis
+
+%\usepackage[top=3cm,]{geometry} % in my MSc Thesis
 \usepackage[margin=2cm]{geometry}
+
+%\usepackage{LukeThesisA4} % Daniel's PhD Thesis uses this. Gives me all kinds of problems.
+
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{chemformula}
 \usepackage[title,titletoc]{appendix}
 \usepackage[final]{pdfpages}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{cite}
+\usepackage{url}
 
 \usepackage{caption}
 \captionsetup{font=small,labelfont=bf,margin={1cm,1cm}}
 
-\newtheorem{question}{Question}
-\newtheorem{definition}{Definition}
+\newtheorem{question}{Question}[chapter]
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
 
 % Opponents: Beatriz Roldan Cuenya and Aliaksandr Bandarenka
 
-
 \newcommand\Tstrut{\rule{0pt}{3ex}}         % = `top' strut
 \newcommand\Bstrut{\rule[-1.2ex]{0pt}{0pt}}   % = `bottom' strut
+
+
+\newcommand{\todo}[1]{\textcolor{red}{ToDo: #1}}
+
 
 \begin{document}
 
@@ -37,13 +49,15 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+\todo Cite Bandarenka active site paper in O2 chapter!
+
 %\input{01_Intro/01_Intro}\clearpage
 
-%\input{02_Tools/02_Tools}\clearpage
+\input{02_Tools/02_Tools}\clearpage
 
 %\input{03_Hydrogen/03_Hydrogen}\clearpage
 
-\input{04_Oxygen/04_Oxygen}\clearpage
+%\input{04_Oxygen/04_Oxygen}\clearpage
 
 %\input{05_Impact/05_Impact}\clearpage
 	

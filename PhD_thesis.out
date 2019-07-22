@@ -1,20 +1,7 @@
-\BOOKMARK [0][-]{chapter.1}{Oxygen}{}% 1
-\BOOKMARK [1][-]{section.1.1}{You have to see the O2!}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Ru on graphene oxide}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Nickel-iron: electrodeposited film vs annealed nanoparticles}{section.1.1}% 4
-\BOOKMARK [1][-]{section.1.2}{How low can we go?}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.2.1}{Sputtered RuO2 films}{section.1.2}% 6
-\BOOKMARK [2][-]{subsection.1.2.2}{Hydrogen-bubble-template Ru foam}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.3}{Turn-over-frequencies}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.4}{The effect of O2 in the electrolyte}{section.1.2}% 9
-\BOOKMARK [1][-]{section.1.3}{To leave or to remain in the lattice}{chapter.1}% 10
-\BOOKMARK [2][-]{subsection.1.3.1}{Determining the TOF in NiFe nanoparticles}{section.1.3}% 11
-\BOOKMARK [2][-]{subsection.1.3.2}{A contradiction}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.3}{Electrochemically labeled RuO2 films}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.4}{Using CO to get out the lattice oxygen}{section.1.3}% 14
-\BOOKMARK [1][-]{section.1.4}{Evolving vs dissolving}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.4.1}{Sputtered Ru18O2 andIr18O2 films}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.2}{Electrochemically labeled films}{section.1.4}% 17
-\BOOKMARK [2][-]{subsection.1.4.3}{Exchange and extraction}{section.1.4}% 18
-\BOOKMARK [2][-]{subsection.1.4.4}{Conclusion and perspective}{section.1.4}% 19
-\BOOKMARK [0][-]{subsection.1.4.4}{Bibliography}{}% 20
+\BOOKMARK [0][-]{chapter.1}{Tools}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Electorchemistry - mass spectrometry}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Chip EC-MS: working principle}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Chip EC-MS: implementation}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Example experiments: RHE potential measurement and CO stripping}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Disadvantages}{section.1.1}% 6
+\BOOKMARK [0][-]{figure.caption.11}{Bibliography}{}% 7
