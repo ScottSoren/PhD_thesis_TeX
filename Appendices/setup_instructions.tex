@@ -1,0 +1,103 @@
+
+\chapter{Setup Instructions}\label{app:instructions}
+
+The following procedures assume that the setup, hardware configuration, and Software interfaces have not changed since the publishing of this Thesis.
+
+\section{Sniffer setup at DTU}\label{app:sniffer}
+
+Component numbers refer to Figure \ref{fig:sniffer} on page \pageref{fig:sniffer}.
+
+The procedure on this setup to change a chip is as follows:
+\begin{enumerate}
+	\item Isolate the chip: Make sure that Valves 13, 5, and 8 are closed, that no carrier gas is flowing, and that PC2 is closed (set to 2 bar). Double-check that Valve 13 is closed!!!
+	
+	\item Remove the old chip and put on the new chip.
+	
+	\item Close valves 1 and 14 and open valve 6 to connect the pumping manifold to the roughing pump. (The gate valve should be closed.)
+	
+	\item Open valve 5. This very quickly removes the majority of the gas from the post-capillary volume
+	
+	\item Close valve 6 and open Valve 1. Open valve 14.  
+	
+	\item Check the pressure displayed on the pressure guage (PG) of the buffer volume. The pressure in the buffer volume should already be less than 1 mbar. If not, the chip has not been installed correctly. If so, close valves 1 and 5 and start over.
+	
+	\item If the pressure in the buffer volume is greater than 0.3 mbar, start pumping through the needle by opening Valve 2.
+	
+	\item When the pressure in the buffer volume is less than 0.3 mbar (as will usually be the case right away after first roughing on the pumping manifold), open the gate valve. This is done by first deactivating 4 and then activating 3.
+	
+	\item When the pressure in the buffer volume is less than 0.0001 mbar, we can open to the mass spectrometer. Make sure that Valves 1 and 5 are open (so that the pressure on the buffer volume is equal to the pressure in the post-capillary volume), and open Valve 13.
+	
+	\item Immediately close Valve 5. This avoids making any subsequent mistake in which carrier gas enters the mas spectrometer via the pumping manifold. Also, close the gate valve. This is done by first deactivating 3 and then activating 4.
+\end{enumerate}
+
+The procedure on this setup to change carrier gases is as follows. We will use the example of changing from He to \ch{H2}. This is what is done in Figure \ref{fig:RHE_cal}.
+
+\begin{enumerate}
+	\item At first, He is flowing through MFC1 at 1 ml/min and continues through Valve 9, Valve 8, the chip, PC2 (set to 1 bar), Valves 1 and 2, the turbo pump, Valve 14, and the roughing pump.
+	
+	\item Close valve 8. There is a reservoir of He in the interface block which will continue to fill the sampling volume of the chip for some time. Thus, the electrochemistry experiment can continue and the electrode ``won't notice'' that anything is going on.
+	
+	\item Stop the He flow by setting the flow on MFC 1 to zero. Valve 9 will automatically close.
+	
+	\item Close Valves 1, 2, and 14. Open Valve 6.
+	
+	\item Open Valve 7. This evacuates the He from the gas manifold. 
+	
+	\item Flush once with \ch{H2}. This can be done by setting the flow on MFC 2 to -1, which will be interpreted as ``go to purge mode for 1 second''.
+	
+	\item Close Valve 7. 
+	
+	\item Fill up the gas manifold with \ch{H2}. This is most quickly done by using the purge function. The purge time required is different for each gas. If you are unsure, enter -0.5 in the MFC, see how the pressure measured by PC1 increases, and then scale up the purge time accordingly. When the pressure is close to 1 bar, use normal flow (positive number for the MFC) to fill it up the rest of the way.
+	
+	\item If you overfill the gas manifold, such that the pressure read at PC 1 is significantly greater than 1 bar, this should be corrected, as a pressure difference when Valve 8 is opened seems to cause more mixing in the carrier gas inlet volume. Use PC1 to lower the pressure to 1 bar.
+	
+	\item When the pressure in the gas manifold is 1 bar: open Valve 8 and immediately set the MFC to its maximum flow value (10 ml/min for most MFC's). The change of carrier gas should be immediately apparent in the mass spectrometer signals.
+	
+	\item When the He level has dropped to background level (or by three orders of magnitude), lower the \ch{H2} flow rate to 1 ml/min. Note that the remaining He signal likely comes more from He dissolved in the elctrolyte in the outer volumes of the cell, and not necessarily the carrier gas. If so, the rate at which the remaining He signal continues to drop should not depend on the carrier gas flow rate.
+	
+	\item Close Valve 6, and open Valves 1, 2, and 14. The setup is now in steady operation in the new carrier gas.
+	
+\end{enumerate}
+
+
+\section{ECMS-200A at CAS in Fuzhou}\label{app:Fuzhou}
+
+Component numbers refer to Figure \ref{fig:Fuzhou} on page \pageref{fig:Fuzhou}.
+
+The procedure to change chip is as follows:
+\begin{itemize}
+	\item Isolate the chip: Close Valves 1, 2, 3, and 4. Double-check that Valve 1 is closed!!! Also, turn off the filament of the mass spectrometer
+	
+	\item Remove the old chip and install the new one.
+	
+	\item Open valve 2 (Valve 8 is normally always open). This removes air from the post-capillary volume through the roughing pump.
+	
+	\item Wait until the pressure is less than 0.01 mbar (1 Pa, the unit on the Chinese displays). This takes approximately half an hour.
+	
+	\item Double check that the filament of the mass spectrometer is turned off, as the roughing pressure could damage it. Then open Valve 1. 
+	
+	\item Immediately close Valve 2.
+	
+	\item When the pressure in the mass spectrometer is less than $10^{-5}$ mbar ($10^{-3}$ Pa), turn on the filament again. After this, it will take a couple hours before the MS signals are stable.	
+\end{itemize}
+
+
+
+The procedure for changing carrier gases (with He to CO as an example) is as follows:
+\begin{itemize}
+	\item At first, He is flowing through Valve 10a, the MFC (set to 1 ml/min), Valve 3, the chip, Valve 4, the pressure controller set to 1 bar (actually a pressure regulator, adjusted to maintain 0 vs atmosphere), Valve 8 and the RP. 
+	
+	\item Close Valves 3 and 4. The electrochemistry experiment can then continue in He while getting the new carrier gas ready.
+	
+	\item Close Valve 10a and set the MFC to zero.
+	
+	\item Pump out the He. This involves opening Valves 5, 6, and 7, and setting PC to zero.
+	
+	\item Close Valves 5 and 6 and set PC to 1 bar.
+	
+	\item Fill up CO: Open Valve 10b. Then set the MFC to 10 ml/min. flow until the pressure read at PC is 1 bar.
+	
+	\item Close Valve 7 and open Valves 3 and 4. The carrier gas change should immediately be visible 
+	
+	\item Set the CO flow to 1 ml/min. The setup is now in steady operation in CO carrier gas.
+\end{itemize}

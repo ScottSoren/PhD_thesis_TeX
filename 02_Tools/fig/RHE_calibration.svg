@@ -28,7 +28,7 @@
 <dc:format>image/svg+xml</dc:format>
 <dc:type
  rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-<dc:title></dc:title>
+<dc:title />
 </cc:Work>
 </rdf:RDF>
 </metadata>
@@ -41,15 +41,15 @@
  guidetolerance="10"
  inkscape:pageopacity="1"
  inkscape:pageshadow="2"
- inkscape:window-width="1855"
+ inkscape:window-width="1839"
  inkscape:window-height="952"
  id="namedview36349"
  showgrid="false"
- inkscape:zoom="1.026087"
- inkscape:cx="633.79409"
- inkscape:cy="188.51738"
- inkscape:window-x="65"
- inkscape:window-y="24"
+ inkscape:zoom="0.72555308"
+ inkscape:cx="406.71504"
+ inkscape:cy="165.30374"
+ inkscape:window-x="81"
+ inkscape:window-y="30"
  inkscape:window-maximized="0"
  inkscape:current-layer="svg36347"
  fit-margin-top="0"
@@ -8280,4 +8280,32 @@
  style="fill:#0000ff;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
  id="flowPara26195">m/z=2 (H<flowSpan
  style="font-size:64.99999762%;baseline-shift:sub;fill:#0000ff;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
- id="flowSpan26199">2</flowSpan>)</flowPara></flowRoot></svg>
+ id="flowSpan26199">2</flowSpan>)</flowPara></flowRoot><flowRoot
+ transform="matrix(2.2381763,0,0,2.2381763,880.78881,518.88373)"
+ style="font-style:normal;font-weight:normal;font-size:7.33333349px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+ id="flowRoot3121"
+ xml:space="preserve"><flowRegion
+ id="flowRegion3117"
+ style="stroke-linecap:butt;stroke-linejoin:round"><rect
+ y="-228.56728"
+ x="-188.57143"
+ height="121.42857"
+ width="120"
+ id="rect3115"
+ style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+ style="font-weight:bold;stroke-linecap:butt;stroke-linejoin:round"
+ id="flowPara3119">b)</flowPara></flowRoot><flowRoot
+ xml:space="preserve"
+ id="flowRoot3107"
+ style="font-style:normal;font-weight:normal;font-size:7.33333349px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round"
+ transform="matrix(2.2381763,0,0,2.2381763,442.08117,518.86768)"><flowRegion
+ id="flowRegion3109"
+ style="stroke-linecap:butt;stroke-linejoin:round"><rect
+ id="rect3111"
+ width="120"
+ height="121.42857"
+ x="-188.57143"
+ y="-228.56728"
+ style="stroke-linecap:butt;stroke-linejoin:round" /></flowRegion><flowPara
+ id="flowPara3113"
+ style="font-weight:bold;stroke-linecap:butt;stroke-linejoin:round">a)</flowPara></flowRoot></svg>

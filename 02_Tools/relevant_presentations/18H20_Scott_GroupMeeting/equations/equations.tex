@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mhchem}
+
+\begin{document}
+	
+	
+	\begin{equation}
+	j_0^{\text{apparent}} = 2\mathcal{F}\left(\frac{D^{\ce{H2}}}{L}\right)\left(\frac{1\,\text{bar}}{K_H^{\ce{H2}}}\right)
+	\end{equation}
+	
+	\begin{equation}
+	i = \left\{ \ce{H2}\,,\, \ce{HD}\,,\, \ce{D2} \right\}
+	\end{equation}
+	
+	\begin{equation}
+	\frac{\partial c^i}{\partial t} = D^i \frac{\partial^2 c^i}{\partial y^2}
+	\end{equation}	
+	
+	\begin{equation}
+	c^i(t,0) = \frac{p^i(t)}{K_H^i}
+	\end{equation}
+	
+	\begin{equation}
+	- \dot{n}^i(t,0) = D^i\left.\frac{\partial c^i}{\partial y}\right|_{y=0} = h^i c^i(t,0)
+	\end{equation}
+	
+	\begin{equation}
+	ZPE(D2) = \frac{1}{\sqrt{2}}*ZPE(H2) 
+	\end{equation}
+	
+	\begin{equation}
+	j_0^{\text{apparent}} = \frac{2 \mathcal{F}}{A_\text{el}} (\dot{n}^{\ce{D2}} + \dot{n}^{\ce{HD}}) 
+	\end{equation}
+	
+	\begin{equation}
+	j_0^{\text{Pt}} \approx \{0.1\, \text{to}\, 1\}
+	\end{equation}
+	
+	
+	\begin{equation}
+	\ce{2 (H+ + e- ) <-> H2}\hspace{8mm}\mathcal{E}^0 = 0\, \text{V vs RHE}
+	\end{equation}
+	
+	
+	
+	\begin{equation}
+	j_0 \rightarrow \infty
+	\end{equation}
+	
+	\begin{align}
+	\ce{D+ + D+ + 2e- &<-> D2}\\
+	\ce{H+ + D+ + 2e- &<-> HD}\\
+	\ce{D+ + H+ + 2e- &<-> DH}\\
+	\ce{H+ + H+ + 2e- &<-> H2}
+	\end{align}
+	
+	\begin{align}
+	\ce{$*$ + (H+ + e- ) &<-> $*$H} &&\text{Volmer}\\
+	\ce{2 $*$H &<-> 2$*$ + H2} &&\text{Tafel}\\
+	\ce{$*$H + (H+ + e- ) &<-> $*$ + H2} &&\text{Heyrovsky}\\
+	\end{align}
+	
+	\begin{equation}
+	x \equiv \frac{c^{\ce{H+}}}{c^{\ce{D+}} + c^{\ce{H+}}}
+	\end{equation}
+	
+	\begin{equation}
+	j_0^{\text{eff}}
+	\end{equation}
+	
+	\begin{equation}
+	j_0
+	\end{equation}
+	
+	\begin{equation}
+	\frac{1}{\sum_i c^i(t, L)}\begin{pmatrix}
+	c^{\ce{H2}}\\c^{\ce{HD}}\\c^{\ce{D2}}
+	\end{pmatrix}(t, L)
+	= \begin{pmatrix}
+	x^2\\ 2x(1-x)\\ (1-x)^2
+	\end{pmatrix}
+	\end{equation}
+	
+\end{document}
