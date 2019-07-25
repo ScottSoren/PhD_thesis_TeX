@@ -1,16 +1,217 @@
 \section{Isotope labeling: tracking atoms}
 
-
 %\subsection{A brief history of isotope labeling and its use in electrocatalysis}
 
 
 \subsection{Example experiment: RHE potential measurement in \ch{D2O}}\label{subsec:isotope_RHE}
-As mentioned in the Foreword, I originally envisioned a chapter called ``Hydrogen'' to proceed the chapter called ``Oxygen'', but ran out of time. This subsection is a consolation for the disappointed reader.
+As mentioned in the Foreword, I originally envisioned a short chapter called ``Hydrogen'', full of electrochemical H-D experiments, to proceed the chapter called ``Oxygen'', but ran out of time. This Subsection is a small consolation for the disappointed reader.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/HD_exchange.png}
+	\caption{\textbf{(a)}, Electrochemical HD exchange experiment on a polycrystalline platinum electrode. The electrolyte is 0.1 M \ch{HClO4} in 99\% \ch{D2O}. Argon carrier gas is exchanged for \ch{H2} at 2050 s while the sample is at open-circuit potential, and \ch{HD} and \ch{D2} are observed (plotted on the right y-axis). \textbf{(b)}, H-D exchange current density, thus measured, for Pt (red dot) and Ir (green dot) plotted on the volcano from N\o rskov et al, 2005 (ref. \cite{Nørskov2005a}).}
+	\label{fig:HD}
+\end{figure}
+
+Figure \ref{fig:HD}a shows an experiment on a polycrystalline platinum stub in deuterated electrolyte, specifically 0.1 M \ch{HClO4} in 99\% \ch{D2O}. Starting from the left, the electrode potential is cycled while in Ar-saturated electrolyte, and an m/z=4 signal is seen near the cathodic potential limit, corresponding to reduction of \ch{D2O} to \ch{D2}. That is why I use Ar (m/z=40) as the carrier gas here instead of He (m/z=4) used normally. 
+
+The electrode potential is then set to open circuit. The carrier gas is then changed, at approximately 2050 s, from Ar to \ch{H2}. Thus far, this is essentially the same procedure as the RHE calibration experiment demonstrated back in Subsection \ref{subsec:examples} (Figure \ref{fig:RHE_cal}). However, there is an important difference. Whereas in isotopically natural electrolyte, the HOR and HER ran, undetected, at equal rates in equilibrium, now the forward and back reactions, Reactions \ref{rxn:HOR} and \ref{rxn:DER}, are distinct:
+\begin{align}
+\ch{H2 &-> 2 (H+ + e- )}&&\text{HOR}\label{rxn:HOR}\\
+\ch{2 (D+ + e- ) &-> D2}&&\text{DER}\label{rxn:DER}
+\end{align}
+Thus, at the RHE condition of open-circuit voltage in 1 bar \ch{H2}, in deuterium-labeled electrolyte, there's a lot going in. A m/z=4 signal rises as \ch{H2} enters the chip, attributed to \ch{D2} from Reaction \ref{rxn:DER}. There is also a m/z=3 signal attributed to \ch{HD}. This \ch{HD} results in part from the H impurity of the electrolyte, but the \ch{HD}/\ch{D2} ratio is higher under RHE conditions than it is during reduction of the electrolyte in inert atmosphere. This indicates that some of the \ch{HD} is due to re-reduction of oxidized \ch{H2}, either via \ch{H2O} or \ch{HDO} formed by Reaction \ref{rxn:HOR} that encounters the surface of the electrode again, and/or via \ch{$*$ H} on the surface of the electrode (diagram in Figure \ref{fig:HD_diagram}). The increasing \ch{HD}/\ch{D2} ratio over the $\approx$ 5 minutes of OCV in \ch{H2}-saturated conditions indicates that at least some of it is due to \ch{H2O} or \ch{HDO}, the concentration of which would build up over time. The potential, meanwhile, falls to a steady level (-0.718 V vs the reference electrode), which is used as the zero point of the RHE potential scale even though these are not strictly equilibrium conditions.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{02_Tools/fig/diagram_HD_exchange.png}
+	\caption{Diagram indicating some of the possible surface reactions on Pt in \ch{H2}-saturated \ch{D2O} electrolyte at OCP.}
+	\label{fig:HD_diagram}
+\end{figure}
+
+At about 2375 s, the potential is cycled again. Like in Figure \ref{fig:RHE_cal}a, there is an anodic current for much of the CV, where HOR is mass-transport limited. Near the cathodic potential limit of 0 V vs RHE, an m/z=4 signal reveals DER. (The cathodic potential limit in the first cycles in Ar was accidentally 10 mV anodic of the RHE potential, thus the smaller \ch{D2} signal). 
+
+The fact that the forward and backwards reactions of the hydrogen equilibrium can be distinguished provides an interesting opportunity: this experiment can be used as a direct probe of the HER/HOR \textit{exchange current density}, which is the equal and opposite current going to the forward and backwards reactions under equilibrium. Assuming that the electrolyte at the surface of the electrode is \ch{H2} saturated, and ignoring isotope effects and the roughness of the electrode, the exchange current density is simply the DER current normalized to the electrode area:
+\begin{equation}
+j_0 = \frac{|I_\text{DER}|}{A_\text{el}} = \frac{2\mathcal{F}\dot{n}^{\ch{D2}}}{A_\text{el}} = \frac{2\mathcal{F}\cdot 540 \left[\frac{\text{pmol}}{\text{s}}\right]}{0.196 [\text{cm}^2]} = 0.53 \left[\frac{\text{mA}}{\text{cm}^2}\right]\,.
+\end{equation} 
+This exchange current density actually agrees fairly well with early reported values for the HER/HOR exchange current density on platinum\cite{Trasatti1972c, Nørskov2005a}, as shown in Figure \ref{fig:HD_diagram}a. That figure also includes the H-D exchange current density (0.55 mA/cm$^2$) measured by the same experiment on a sputterd iridium electrode.
+
+However, there are a number of newer measurements of the exchange current density which arrive at numbers much higher than this: 120 mA/cm$^2$ for platinum nanoparticles in a Fuel-cell membrane-electrode assembly\cite{Durst2015}, $\approx$100 mA/cm$^2$ for mass-selected platinum nanoparticles in a photo-electrochemical system\cite{Kemppainen2015}, and 170-960 mA/cm$^2$ with Pt nanoparticles in a floating porous membrane interfacing the liquid electrolyte and \ch{H2} gas\cite{Zalitis2017b}. The authors of all these studies reporting very high values for the HER/HOR exchange current density claim that the earlier measurements, which typically employed rotating disk electrodes, were all measuring HER/HOR kinetics under mass transport limited conditions. Nonetheless, these old values on the order of 1 mA/cm$^2$ are still often in use\cite{Tymoczko2016}.
+
+The use of electrochemical H-D exchange to probe the exchange current density could provide a unique opportunity to resolve the issue, as it is a direct measurement of what is happening at zero net current density, the condition for which exchange current density is defined. All other studies extrapolate from non-zero current densities. However, the question is: 
+
+\begin{question}
+	Is the electrochemical H-D exchange reaction demonstrated here also mass-transport limited?\label{q:HD}
+\end{question}
+
+Figure \ref{fig:HD}a actually tells us the mass-transport limited current for HOR. It is the current in the double-layer region during the cyclic voltammagrams in \ch{H2}-saturated electrolyte, i.e., the plateau current during the cyclic voltammatry at the right in Figure \ref{fig:HD}. This current density is 0.7 mA/cm$^2$, which is more (but not a lot more) than the measured exchange current density. However, the main mass transport limitation is not actually getting \ch{H2} in, it is getting \ch{D2} out. This is because, whereas \ch{H2} can readily fill the chip and is only limited by diffusion through the working volume, \ch{D2} must not only diffuse through the working volume to the chip but must also escape the chip through the capillary. This is diagrammed in figure \ref{fig:HD_mass}a. The respective mass transport-limited current densities are:
+\begin{align}
+j_\text{lim}^\text{HOR} &= 2\mathcal{F} \frac{p^0}{K_H^{\ch{H2}}}\frac{D^{\ch{H2}}}{L} &= 0.67\left[\frac{\text{mA}}{\text{cm}^2}\right] \label{eq:HOR_lim}\\
+j_\text{lim}^\text{DER} &= 2\mathcal{F} \frac{p^0}{K_H^{\ch{D2}}}\left(\frac{L}{D^{\ch{D2}}} + \frac{1}{h^{\ch{D2}}}\right)^{-1} &= 0.54\left[\frac{\text{mA}}{\text{cm}^2}\right] \label{eq:DER_lim}\\
+\end{align}
+Here, $L=100\,\mu$m is the working distance, $D^i$ is the diffusion coefficient of species $i$, $K_H^i$ is its Henry's-law constant, and $h^i$ is its mass transfer coefficient through the chip (described in Paper \ref{Trimarco2018}). I have ignored isotope effects and used the values \ch{H2}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/HD_mass.png}
+	\caption{Mass transport limitation in electrochemical HD exchange \textbf{(a)}, diagram of mass transport in EC-MS, indicating the \ch{H2} and \ch{D2} concentration profiles during the HD exchange experiment. \textbf{(b)}, Measured \ch{D2} and \ch{HD} fluxes, converted to partial current densities, as a function of working distance $L$. The theoretical limiting currents for HOR and DER, from Equations \ref{eq:HOR_lim} and \ref{eq:DER_lim} are included.}
+	\label{fig:HD_mass}
+\end{figure}
+
+The mass-transport limited current based on \ch{D2} removal from the electrode surface is remarkably close to the measured H-D exchange current density. This indicates that we, too, are just probing mass transport. The electrolyte at the surface of the electrode is thus in equilibrium, i.e. \ch{H2}, \ch{HD} and \ch{D2} follow a binomial distribution:
+\begin{equation}
+\frac{1}{\sum_i c^i}\begin{pmatrix}
+c^{\ch{H2}}\\c^{\ch{HD}}\\c^{\ch{D2}}
+\end{pmatrix}
+= \begin{pmatrix}
+x^2\\ 2x(1-x)\\ (1-x)^2
+\end{pmatrix}\,,\hspace{1cm}\text{where}\hspace{1cm}
+x \equiv \frac{c^{\ch{H+}}}{c^{\ch{D+}} + c^{\ch{H+}}}\,.
+\end{equation}
+One way to confirm that a reaction is mass transport limited is to establish its dependence on the working distance $L$. This can be done by exchanging the 100 $\mu$m PTFE spacer (Figure \ref{fig:fig:chipECMS2}) with a spacer of a different thickness. Results for electrochemical H-D exchange on Pt are shown in Figure \ref{fig:HD_mass}b. While there is not a perfect match between experiment and theory, there is clearly a dependence on the apparent H-D exchange current density on distance, indicating that the answer to Question \ref{q:HD} is ``yes''.
+
+Strategies to measure the H-D exchange current density without mass transport could include (1) doing the experiment on a sample with a small coverage of mass-selected platinum nanoparticles and/or (2) depositing the sample directly on the chip membrane, essentially setting $L=0$.
+
+Even though this particular experiment only probed mass transport and not electrocatalytic kinetics, it indicates a promising window into the latter. Experiments avoiding mass-transport limitations by the strategies above, and testing for non-equilibrium effects on other electrocatalyst materials will follow. One particular interesting material in this regard is copper, as it shows interesting and unexpected hydrogen adsorption/desorption properties, as described in Paper \ref{Scott_Engstfeld_2019}.
+
 
 \subsection{Example experiment: CO stripping in \ch{H2^{18}O} electrolyte}\label{subsec:isotope_CO2}
 
+Subsection \ref{subsec:examples} showed a CO stripping experiment on platinum, and I promised that an equivalent experiment in isotope-labeled electrolyte would come in this Section. The interesting atom to label in \ch{CO} stripping experiments is oxygen, as oxygen can have at least two origins: the \ch{CO} and the \ch{H2O} in the electrolyte.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/COstrip_Ir.png}
+	\caption{CO stripping experiment on a sputtered rutile \ch{IrO2} electrode in 0.1 M \ch{HClO4} in 97\% \ch{H2^{18}O}. \textbf{(a)}, as an EC-MS plot and \textbf{(b)}, plotted vs potential for the two indicated cycles. The mass spec data is raw (uncalibrated) signals.}
+	\label{fig:IrO2_COstrip}
+\end{figure}
+
+Figure \ref{fig:IrO2_COstrip} shows a CO stripping experiment on a sputtered rutile \ch{IrO2} film. (I was surprised when writing this Thesis to find that I do not have data for a simple \ch{CO} stripping experiment on Pt in \ch{^{18}O} electrolyte, though I have plenty of more intricate variations on Pt, coming up.) Interestingly, crystalline \ch{IrO2} such as the sample used for Figure \ref{fig:IrO2_COstrip} adsorbs \ch{CO} at cathodic potentials, indicating that the metal atoms of the surface layer are exposed; whereas electrochemically formed hydrous \ch{IrO2} does not. 
+
+From the left of Figure \ref{fig:IrO2_COstrip}a, which uses a log scale so as to include all m/z signals: the plot starts with \ch{CO} (m/z=28) as the carrier gas, and then it is switched for \ch{Ar} (m/z=40) while the electrode is held at 0.3 V vs RHE. The m/z=36 signal rises as well due to \ch{^{36}Ar}. This is actually annoying because it raises the background on \ch{^{18}O2}, a molecule of interest in \ch{^{18}O}-labeling experiments also at m/z=36. For this reason \ch{He} is used as the inert carrier gas in all subsequent \ch{^{18}O} experiments. At about 1700 s, the potential is scanned, first in the cathodic direction and then in the anodic direction. The first cycle shows some \ch{H2} (m/z=2) near the cathodic potential limit and then a number of signals on the anodic scan: m/z=46 and 44 quickly followed by 48, and then m/z=36 and 34 at the anodic limit. These are attributed to \ch{C^{16}O2}, \ch{C^{16}O^{18}O} (m/z=46), \ch{C^{18}O2} (m/z=48), \ch{^{16}O^{18}O} (m/z=34), and \ch{^{18}O2} (m/z=36). On the next cycle, there is more \ch{H2}, the same amount of \ch{O2}, and much less of the three isotopes of \ch{CO2}, with most of the second-cycle \ch{CO2} signal at m/z=48. The \ch{H2} and \ch{CO2} signals from these two cycles are plotted on linear scale against potential in Figure \ref{fig:IrO2_COstrip}b, showing that the \ch{CO2} signals, primarily m/z=46, start at $\approx$0.7 V vs RHE together with an anodic stripping current. 
+	
+\ch{CO} stripping on noble metal surfaces is believed to procede via a Langmuir-Hinshelwood mechanism\cite{Mayrhofer2005, Koper2009}, whereby adsorbed \ch{$*$ CO} reacts with adsorbed \ch{$*$ OH}. When the \ch{$*$ OH} comes from an \ch{^{18}O}-labeled electrolyte, the mechanism is:
+\begin{align}
+\ch{C^{16}O + $*$ &-> $*$ C^{16}O}\\
+\ch{H2^{18}O + $*$ &-> $*$ ^{18}OH + (H+ + e- )}\\
+\ch{ $*$ C^{16}O +  $*$ ^{18}OH &-> C^{16}O^{18}O + 2 $*$ + (H+ + e- )}
+\end{align}
+This implies that the \ch{CO2} desorbed should be \ch{C^{16}O^{18}O} at m/z=46. Some \ch{C^{16}O2} at m/z=44 can be expected due to the \ch{^{16}O} impurity in the electrolyte, but m/z=48 came as a huge surprise! Noble metal surfaces should not be able to split \ch{CO}\cite{Bernasek1975}!  Natural \ch{CO} is 99.8\% \ch{C^{16}O}, and I confirmed this for the \ch{CO} from our bottle by taking a mass spectrum (it is 1\% \ch{^{13}CO}, but, luckily, that can be ignored for these experiments)... I had a few fantastic days of scratching my head over this result.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{02_Tools/fig/diagram_CO_strip_18O.png}
+	\caption{Schematic diagram for \ch{CO} stripping in \ch{^{18}O}-labeled electrolyte (left) and subsequent homogeneous isotope scrambling via carbonic acid (right). Metal atoms are gray, carbon atoms black, hydrogen atoms white with blue outline, \ch{^{16}O} atoms red with black outline, and \ch{^{16}O} atoms are green.}
+	\label{fig:diagram_CO_18O}
+\end{figure}
+The answer is that, while noble metal surfaces cannot split \ch{CO}, water \textit{can} split \ch{CO2}! Aqueous \ch{CO2} is in equilibrium with carbonic acid, \ch{H2CO3}. (That is, incidentally, why the oceans are getting more acidic.) The full process is indicated schematically in Figure \ref{fig:diagram_CO_18O}. The \ch{CO2} starts as \ch{C^{16}O^{18}O}, but some of it interracts with \ch{H2^{18}O} on the way out of the electrolyte and ends up switching out its \ch{^{16}O} for an \ch{^{18}O} (Reaction \ref{rxn:carbonic}).
+\begin{equation}
+\ch{C^{16}O^{18}O + H2^{18}O ->[$k$] H2C^{16}O^{18}O2 ->[$k$2] H2^{16}O + C^{18}O2}\label{rxn:carbonic}
+\end{equation}
+I actually found this very interesting, so I put some effort into exploring it. I think that the phenomenon an excellent demonstration of the world opened up by isotope studies using chip EC-MS, and so I will share with you here. CO oxidation coupled with \ch{^{18}O}-labeling will also be used in Chapter \ref{ch:O2} as a probe of lattice oxygen reactivity in oxygen evolution catalysts, so this Subsection also serves to familiarize the reader with the chemistry involved.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/COox_CVs_vs_potential.png}
+	\caption{Cyclic voltammagrams of a polycrystalline Pt electrode in 0.1 M \ch{HClO4} in 97\% \ch{H2^{18}O}, saturated first with \ch{CO} and thereafter with \ch{He}. \textbf{(a)} As an EC-MS plot with carrier gases plotted on the left y-axis and product gases on the right y-axis. \textbf{(b)} The two cycles indicated in (a) are plotted against potential. MS signals were calibrated according to the procedures in Section \ref{sec:quantification}.}
+	\label{fig:COox_CVs}
+\end{figure}
+One of the first things I tried was bulk \ch{CO} oxidation, akin to that in Figure \ref{fig:fig3}a. Figure \ref{fig:COox_CVs}a shows two cyclic voltammagrams of a polycrystalline \ch{Pt} electrode in CO-saturated \ch{^{18}O}-labeled electrolyte (0.1 M \ch{HClO4} in 97\% \ch{H2^{18}O}), followed by two cycles in He-saturated electrolyte. CO is oxidized to \ch{CO2} in the first two cycles, and the \ch{CO2} isotopes have distinct profiles. The \ch{C^{16}O^{18}O} profile has much sharper features and leads the \ch{C^{18}O2} profile. The origin of the features is more clear when the \ch{CO2} signals are plotted against potential, as is done in Figure \ref{fig:COox_CVs}b. 
+
+At $\approx$ 0.9 V in the cycle in \ch{CO} (cycle 1), an anodic peak represents the oxidative stripping of the adsorbed \ch{CO} monolayer and the depletion of \ch{CO} in the working volume on the approach to steady state. This is accompanied by a rapid increase in the \ch{C^{16}O^{18}O} signal. The current and the \ch{C^{16}O^{18}O} signal start to fall at about 1.4 V vs RHE, where the platinum surface oxidizes and looses \ch{CO} electro-oxidation activity. Then, starting at about 0.8 V vs RHE on the cathodic sweep, the sample regains some \ch{CO} oxidation activity as the surface is reduced. The gain in \ch{CO} oxidation activity outweighs the surface reduction current, but the latter is evidenced by the cathodic current at the same part of the CV in He (cycle 2). There is a corresponding peak in the \ch{C^{16}O^{18}O} signal during the cathodic scan. 
+
+Meanwhile, the \ch{C^{18}O2} signal moves much more slowly. It increases gradually the entire anodic scan starting just after the oxidation feature at 0.9 V vs RHE, decreases only slowly during the cathodic scan, and barely registers a peak after the Pt surface is reduced. On the other hand, the \ch{C^{16}O2} signal follows the \ch{C^{16}O^{18}O} signal, just with smaller intensity.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{02_Tools/fig/COox_CVs_predicted2.png}
+	\caption{Model of \ch{CO2} signal in Figure \ref{fig:COox_CVs}. Top: CO oxidation current obtained by subtracting a cyclic voltammagram in He from a cyclic voltammagram in CO. Moddle: modeled concentration as a function of time (x axis) and distance from the membrane (y axis) in the working volume. The electrode is at the top. The working distance of $L=160\,\mu$m, indicating poor sample alignment, was determined by the mass-transport-limited \ch{CO} oxidation current. The modeled \ch{CO2} concentration varies from zero (black) to 2.2 mM (bright yellow). Bottom: the \ch{CO2} flux to the mass spectrometer predicted by the model, scaled down by a factor of 3, is co-plotted with the measured calibrated \ch{CO2} signals.}
+	\label{fig:COox_pred}
+\end{figure}
+The question then arises:
+\begin{question} 
+What \textit{should} the \ch{CO2} signal be doing?
+\end{question}
+This question is actually straight-forward to answer with the stagnant thin-layer model presented in Paper \ref{Trimarco2018}, which takes into account diffusion through the working volume, evaporation through the chip membrane, and removal to the vacuum chamber through the chip capillary. The input to this model is the production rate of an analyte at the electrode as a function of time. Such a production rate can be determined by subtracting the current in the cyclic voltammagram in \ch{He} (cycle 2) from the current at the corresponding time in the cyclic voltammagram in \ch{CO}. The resulting current difference is shown in the top panel of Figure \ref{fig:COox_pred}. When this is converted to a \ch{CO2} production rate assuming 2 electroons per \ch{CO2} molecule, and fed to the model, we get the concentration profile in the middle panel of Figure \ref{fig:COox_pred}. Here, the y-axis represents the position in the working volume, with the electrode on top and the chip membrane on the bottom. The predicted flux to the mass spectrometer is proportional to the calculated concentration at the chip membrane, and is shown as a dotted line in the bottom panel of Figure \ref{fig:COox_pred}. It is plotted (scaled down with a factor 3) together with the actual measured \ch{CO2} signals.
+
+The modeled flux falls \textit{between} the \ch{C^{16}O^{18}O} and \ch{C^{18}O2} signals! In other words, while the \ch{C^{18}O2} signal is slower than expected, the \ch{C^{16}O^{18}O} signal is \textit{faster} than expected! What is going on here?
+
+To anyone familiar with chromatography, this may seem like a separation process, whereby heavy \ch{CO2} molecules are retained longer in the working volume. However, this is getting it a bit backwards. There is no separation process - it is just that the \ch{CO2} molecules which happen to take longer to make it through the working volume are more likely to \textit{become} heavy by Reaction \ref{rxn:carbonic}. It is then a wonderful coincidence that the average time between reactions of \ch{CO2} with \ch{H2O} is on the same order of magnitude as the average time that a \ch{CO2} molecule produced at the electrode lingers in the working volume before entering the chip, and the mass spectrometer.
+
+The actual concentration of carbonic acid (of any isotopic makeup) at any time is very small. The equilibrium constant is \cite{CRC2015}:
+\begin{equation}
+K_\text{eq} = \frac{c^{\ch{H2CO3}}}{c^{\ch{CO2}}} = \frac{k}{k_2} = 1.7\cdot 10^{-3}
+\end{equation}
+Thus, the first step in Reaction \ref{rxn:carbonic} is slow, with a rate constant $k$, and the second step is about 500 times faster. The ``wonderful coincidence'' can be stated
+\begin{equation}
+\tau^{\ch{CO2}}\sim\frac{1}{k}
+\end{equation}
+The question on my mind by this point was
+\begin{question}
+Can the m/z=44, m/z=46, and m/z=48 signals be used to determine $k$?
+\end{question}
+The answer is ``yes''. But to do so in a manageable way requires having a well-defined isotope composition at $t=0$, with no additional \ch{CO2} being introduced.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/COox_faststrip.png}
+	\caption{Fast CO stripping experiment. \textbf{(a)}, The whole experiment, from when the carrier gas was switched. \textbf{(b)}, zoom-in on the \ch{CO2} signals during and right after the jump in electrode potential.}
+	\label{fig:COox_faststrip}
+\end{figure}
+I established such a start condition by doing a ``fast \ch{CO} strip'', shown in Figure \ref{fig:COox_faststrip}. The surface of the platinum electrode is saturated with \ch{CO}, \ch{CO} is replaced by \ch{He} in the working volume electrolyte, and then, at $t=0$, the electrode potential is jumped to 1.0 V vs RHE, at which point all the \ch{CO} should immediately strip off as \ch{CO2}. Initially, there is no \ch{C^{18}O2}, as \ch{CO} does not dissociate on platinum. The \ch{C^{16}O2}-to-\ch{C^{16}O^{18}O} ratio is the same as the \ch{H2^{16}O}-to-\ch{H2^{18}O} ratio in the electrolyte (called $x$), which can be determined independently by OER, with the resulting \ch{O2} having an isotopic composition given by the binomial distribution.
+
+To avoid worrying about the total signal \ch{CO2}, which changes over the course of the experiment first as \ch{CO2} distributes itself in the working volume by diffusion and then as it evaporates through the chip, we just work with the normalized signals, representing the isotopic composition:
+\begin{equation}
+\hat{S}_\text{M44} = \frac{S_\text{M44}}{S_\text{M44} + S_\text{M46} + S_\text{M48}}\,,\hspace{1cm}\text{etc.}
+\end{equation}
+
+Given the start condition and $k$, we can develop a set of differential equations relating the change in the time derivatives of $\hat{S}_M$ to the present values of $\hat{S}_M$. There are a total of eight reactions passing through a molecule of carbonic acid with mixed oxygen isotopes. These eight reactions are diagrammed in Figure \ref{fig:carbonic_kinetics}a. I've assumed that each of the three oxygen atoms of the resulting carbonic acid are equally likely to be expelled as \ch{H2O} when the new \ch{CO2} molecule is formed, resulting in the indicated probabilities.
+
+When the effects of these eight reactions on $\hat{S}_\text{M44}$, $\hat{S}_\text{M46}$, and $\hat{S}_\text{M48}$ are added together, taking into account the activities $x$ and ($1-x$) for \ch{H2^{16}O} and \ch{H2^{18}O}, respectively, we get the following set of differential equations, shown in matrix form:
+\begin{equation}
+\frac{\mathrm{d}}{\mathrm{d} t} \left( \begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{M48} 
+\end{array}  \right) = k \left( \begin{array}{c c c}   -\frac{2}{3}(1-x) & + \frac{1}{3}x & 0 \\  \frac{2}{3}(1-x) & -\frac{1}{3} & \frac{2}{3}x \\  0 & \frac{1}{3}(1-x) & -\frac{2}{3}x
+\end{array}  \right) \left(\begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{M48} 
+\end{array}  \right)
+\end{equation}
+And the initial condition is:
+\begin{equation}
+\left(\begin{array}{c}  \hat{S}_\text{M44} \\ \hat{S}_\text{M46}\\ \hat{S}_\text{48} 
+\end{array}  \right)_0 = \left(\begin{array}{c}  x \\ 1-x \\ 0 
+\end{array}  \right)
+\end{equation}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/COox_carbonic_kinetics.png}
+	\caption{\textbf{(a)} Possible oxygen-exchanging reactions between \ch{H2O} and \ch{CO2}. \textbf{(b)}, \ch{CO2} isotopic compositions as a function of time from the solution of a kinetic model using two different values of the rate constant $k$ are co-plotted with the normalized measured \ch{CO2} signals from Figure \ref{fig:COox_faststrip}b}
+	\label{fig:carbonic_kinetics}
+\end{figure}
+Numerical solution of this set of ordinary differential equations gives $\hat{S}_M$ as a function of time. The solution depends on the value of $k$. Solutions for two values of $k$ are shown in Figure \ref{fig:carbonic_kinetics}, together with the measured $\hat{S}_M$ from the experiment in Figure \ref{fig:COox_faststrip}. The first value of $k$, 0.026 s${-1}$, is taken from the literature\cite{Pinsent1956}. Using this value of $k$ gives a too-slow conversion of \ch{C^{16}O^{18}O} to \ch{C^{18}O2}. The second value of $k$, 0.080 s$^{-1}$, is chosen to fit the data. 
+
+A likely cause for the discrepency is temperature: $k=0.026$ s$^{-1}$ was measured at the standard temperature of 25$^\circ$C, whereas it can easily get hotter at the sniffer setup in SurfCat's experimental hall. The actual temperature in the working volume electrolyte during that experiment could well have been 30$^\circ$C, which could explain the increased rate constant.
+
+On top of being a fun opportunity to experiment with isotopes and use some differential equations, this example illustrates yet another potential application of chip EC-MS: It can in principle be used to measure the kinetics of any homogeneous reaction that
+\begin{itemize}
+	\item Releases or consumes a gas (e.g. \ch{C^{18}O2})
+	\item Can be triggered by either (1) an electrochemical signal (e.g. an applied potential to strip off a monolayer of \ch{CO}), or (2) introduction of a carrier gas.
+\end{itemize}
+
 
 \subsection{Labeling the vacuum chamber}\label{subsec:vacuum_transport}
+
+Towards the end of the last section, I mentioned that to determine $x$, the fraction \ch{H2^{16}O} in the labeled electrolyte, I did so indirectly by measuring the isotopic composition of \ch{O2} made by OER and then back-calculated the 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/O18_drop.png}
+	\caption{}
+	\label{fig:O18_drop}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/O16_drop.png}
+	\caption{}
+	\label{O16_drop}
+\end{figure}
+
 
 
 \subsection{Other tools: Sputter deposition, ISS, and ICP-MS}\label{subsec:other_tools}
