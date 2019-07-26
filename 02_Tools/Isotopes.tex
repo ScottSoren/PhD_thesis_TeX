@@ -1,4 +1,4 @@
-\section{Isotope labeling: tracking atoms}
+\section{Isotope labeling: tracking atoms}\label{sec:isotopes}
 
 %\subsection{A brief history of isotope labeling and its use in electrocatalysis}
 
@@ -109,11 +109,11 @@ x^2\\ 2x(1-x)\\ (1-x)^2
 \end{pmatrix}\,,\hspace{1cm}\text{where}\hspace{1cm}
 x \equiv \frac{c^{\ch{H+}}}{c^{\ch{D+}} + c^{\ch{H+}}}\,.
 \end{equation}
-One way to confirm that a reaction is mass transport limited is to establish its dependence on the working distance $L$. This can be done by exchanging the 100 $\mu$m PTFE spacer (Figure \ref{fig:fig:chipECMS2}) with a spacer of a different thickness. Results for electrochemical H-D exchange on Pt are shown in Figure \ref{fig:HD_mass}b. While there is not a perfect match between experiment and theory, there is clearly a dependence on the apparent H-D exchange current density on distance, indicating that the answer to Question \ref{q:HD} is ``yes''.
+One way to confirm that a reaction is mass transport limited is to establish its dependence on the working distance $L$. This can be done by exchanging the 100 $\mu$m PTFE spacer (Figure \ref{fig:chipECMS2}) with a spacer of a different thickness. Results for electrochemical H-D exchange on Pt are shown in Figure \ref{fig:HD_mass}b. While there is not a perfect match between experiment and theory, there is clearly a dependence on the apparent H-D exchange current density on distance, indicating that the answer to Question \ref{q:HD} is ``yes''.
 
 Strategies to measure the H-D exchange current density without mass transport could include (1) doing the experiment on a sample with a small coverage of mass-selected platinum nanoparticles and/or (2) depositing the sample directly on the chip membrane, essentially setting $L=0$.
 
-Even though this particular experiment only probed mass transport and not electrocatalytic kinetics, it indicates a promising window into the latter. Experiments avoiding mass-transport limitations by the strategies above, and testing for non-equilibrium effects on other electrocatalyst materials will follow. One particular interesting material in this regard is copper, as it shows interesting and unexpected hydrogen adsorption/desorption properties, as described in Paper \ref{Scott_Engstfeld_2019}.
+Even though this particular experiment only probed mass transport and not electrocatalytic kinetics, it indicates a promising window into the latter. Experiments avoiding mass-transport limitations by the strategies above, and testing for non-equilibrium effects on other electrocatalyst materials will follow. One particular interesting material in this regard is copper, as it shows interesting and unexpected hydrogen adsorption/desorption properties, as described in Paper \ref{Scott_Engstfeld2019}.
 
 
 \subsection{Example experiment: CO stripping in \ch{H2^{18}O} electrolyte}\label{subsec:isotope_CO2}
@@ -283,7 +283,7 @@ It is very important to make sure that the vacuum chamber is not labeled before 
 
 \subsection{Other tools: Sputter deposition, ISS, and ICP-MS}\label{subsec:other_tools}
 
-So far this chapter has exclusively described the chip EC-MS technique and its use in quantitative mass spectrometry and isotope labeling studies. Chip EC-MS has indeed been the central tool of my PhD project, but not the only one (for something completely different, see paper \ref{Scott2019}). This final Subsection will briefly describe a few other tools used in the next Chapter.
+So far this chapter has exclusively described the chip EC-MS technique and its use in quantitative mass spectrometry and isotope labeling studies. Chip EC-MS has indeed been the central tool of my PhD project, but not the only one (for something completely different, see paper \ref{Scott2019_GIXRD}). This final Subsection will briefly describe a few other tools used in the next Chapter.
 
 \textbf{Sputter deposition}
 
@@ -315,7 +315,7 @@ ISS is especially useful in the context of this thesis because, since it probes 
 Is the oxygen at the surface of my metal oxide sample \ch{^{16}O} or \ch{^{18}O}?
 \end{question}
 
-All of the ISS spectra presented in Section \ref{sec:lattice} were taken by Jakob Ejler using the Omicron setup. I took all of the ISS spectra presented in Section \ref{sec:dissolving} using the Thetaprobe setup after Ezra Clark got it working.
+All of the ISS spectra presented in Section \ref{sec:lattice_O} were taken by Jakob Ejler using the Omicron setup. I took all of the ISS spectra presented in Section \ref{sec:dissolving} using the Thetaprobe setup after Ezra Clark got it working.
 
 
 \textbf{Inductively Coupled Plasma - Mass Spectrometry (ICP-MS)}
@@ -350,7 +350,7 @@ To determine $c_m^i$ from the raw signal (in counts) requires calibration. A dil
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{02_Tools/fig/ICPMS_calibration_curves.png}
-	\caption{Calibration curves for ICP-MS detection of \textbf{(a)} Ir and \textbf{(b)} Ru. The top x-axes represents the amount of metal originally in a sample from the EC-MS setup, and is scaled to the bottom x-axis according to Equation \ref{eq_ppb_to_pmol}. The dashed black line is the mean number of counts in blank measurements, and the dotted black line is that mean plus three times the standard deviation of the number of counts in the blank measurement. The detection limit, defined as where the latter intercepts the calibration curve, is indicated with a green vertical line.}
+	\caption{Calibration curves for ICP-MS detection of \textbf{(a)} Ir and \textbf{(b)} Ru. The top x-axes represents the amount of metal originally in a sample from the EC-MS setup, and is scaled to the bottom x-axis according to Equation \ref{eq:ppb_to_pmol}. The dashed black line is the mean number of counts in blank measurements, and the dotted black line is that mean plus three times the standard deviation of the number of counts in the blank measurement. The detection limit, defined as where the latter intercepts the calibration curve, is indicated with a green vertical line.}
 	\label{fig:ICPMS_cal}
 \end{figure}
 
