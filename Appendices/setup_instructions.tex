@@ -7,6 +7,7 @@ The following procedures assume that the setup, hardware configuration, and Soft
 
 Component numbers refer to Figure \ref{fig:sniffer} on page \pageref{fig:sniffer}.
 
+\subsection{Changing chip}
 The procedure on this setup to change a chip is as follows:
 \begin{enumerate}
 	\item Isolate the chip: Make sure that Valves 13, 5, and 8 are closed, that no carrier gas is flowing, and that PC2 is closed (set to 2 bar). Double-check that Valve 13 is closed!!!
@@ -30,6 +31,8 @@ The procedure on this setup to change a chip is as follows:
 	\item Immediately close Valve 5. This avoids making any subsequent mistake in which carrier gas enters the mas spectrometer via the pumping manifold. Also, close the gate valve. This is done by first deactivating 3 and then activating 4.
 \end{enumerate}
 
+
+\subsection{Changing carrier gas}
 The procedure on this setup to change carrier gases is as follows. We will use the example of changing from He to \ch{H2}. This is what is done in Figure \ref{fig:RHE_cal}.
 
 \begin{enumerate}
@@ -60,12 +63,48 @@ The procedure on this setup to change carrier gases is as follows. We will use t
 \end{enumerate}
 
 
+\subsection{Electrolyte sampling}\label{app:sampling}
+
+It is possible with the sniffer setup to take electrolyte samples out under potential control for analysis with ICP-MS. This requires an electrolyte delivery bottle on one side and a syringe on the other side, as shown in Figure \ref{fig:ICPMS} on Page \pageref{fig:ICPMS}. To set this up (items 1 through 4 are the standard procedure):
+\begin{enumerate}
+	\item Align the sample in the cell
+	
+	\item Mount the cell on the interface block
+	
+	\item Fill the cell with electrolyte using the syringe
+	
+	\item Insert the RE and CE glassware when the electrolyte forms a miniscus in the Luer fitting
+	
+	\item When there is a miniscus of electrolyte coming out of the outlet (male Luer fitting), very quickly open the valve on the electrolyte delivery tower and push the tube onto the Luer fitting, connecting the tower and the cell. This should be done quickly to minimize spilling. Clean up any spill right a way with a paper wipe.
+	
+	\item Close the valve.
+\end{enumerate}
+
+It is important that valve is open while the electrolyte delivery tower is connected the cell to avoid developing an overpressure which could breach the chip. It is good for it to be closed during the experiment, or the pressure of the electrolyte above the valve can push electrolyte into the cell and exascerbate any leaks that might be present.
+
+To take an electrolyte sample:
+\begin{enumerate}
+\item Open the valve to the electrolyte delivery tower
+
+\item Pull 0.5 ml of electrolyte with the syringe. Do so as steadily as possible to avoid making an underpressure which could pull carrier gas from the chip into the working volume. Bubbles are the enemy!
+
+\item Remove the syringe and close the valve of the electrolyte delivery tower as fast as possible to minimize spillage. Clean up any spillage.
+
+\item Empty the syringe into an eppendorf tube or other storage. This is your sample for ICP-MS.
+
+\item Very quickly open the valve to the electrolyte delivery tower and quickly re-insert the syringe.
+
+\item Close the valve. You're ready to take the next sample when the time comes.
+\end{enumerate}
+
+
 \section{ECMS-200A at CAS in Fuzhou}\label{app:Fuzhou}
 
 Component numbers refer to Figure \ref{fig:Fuzhou} on page \pageref{fig:Fuzhou}.
 
+\subsection{Changing chip}
 The procedure to change chip is as follows:
-\begin{itemize}
+\begin{enumerate}
 	\item Isolate the chip: Close Valves 1, 2, 3, and 4. Double-check that Valve 1 is closed!!! Also, turn off the filament of the mass spectrometer
 	
 	\item Remove the old chip and install the new one.
@@ -79,12 +118,13 @@ The procedure to change chip is as follows:
 	\item Immediately close Valve 2.
 	
 	\item When the pressure in the mass spectrometer is less than $10^{-5}$ mbar ($10^{-3}$ Pa), turn on the filament again. After this, it will take a couple hours before the MS signals are stable.	
-\end{itemize}
+\end{enumerate}
 
 
 
+\subsection{Changing carrier gas}
 The procedure for changing carrier gases (with He to CO as an example) is as follows:
-\begin{itemize}
+\begin{enumerate}
 	\item At first, He is flowing through Valve 10a, the MFC (set to 1 ml/min), Valve 3, the chip, Valve 4, the pressure controller set to 1 bar (actually a pressure regulator, adjusted to maintain 0 vs atmosphere), Valve 8 and the RP. 
 	
 	\item Close Valves 3 and 4. The electrochemistry experiment can then continue in He while getting the new carrier gas ready.
@@ -100,4 +140,53 @@ The procedure for changing carrier gases (with He to CO as an example) is as fol
 	\item Close Valve 7 and open Valves 3 and 4. The carrier gas change should immediately be visible 
 	
 	\item Set the CO flow to 1 ml/min. The setup is now in steady operation in CO carrier gas.
-\end{itemize}
+\end{enumerate}
+
+
+\section{Sputtering \ch{Ru^{18}O2} and \ch{Ir^{18}O2}}
+
+This appendix serves as the sample prep methods for most of Chapter \ref{ch:O2}, as well as instructions for sputter deposition using \ch{^{18}O2}.
+
+\subsection{Switching \ch{O2} source}
+First, prepare the reactant gas. This requires a pump-down step to avoid mixing the natural \ch{O2} and the 99\% \ch{^{18}O2}.
+\begin{enumerate}
+	\item Make sure the flow is off (AJA software) and the reactant gas valve on the top of the sputter chamber (manually controlled) is open!
+	
+	\item Make sure both the natural oxygen (\ch{^{16}O2}) and \ch{^{18}O2} valves nearest the switch (the T intersection just before the flow controller) are closed.
+	
+	\item Evacuate the switch through the sputter chamber. This is a bit tedious because the AJA software will try to close the pneumatic valve when the flow doesn't reach set point. First flow at 10 ml/min until there is so little gas that this flow rate cannot be met. Then set it to 0.5 ml/min and leave it for an hour. The AJA software seems to have a tolerance of 0.5 ml/min before automatically closing the valves, so this will leave it open.
+	
+	\item Turn off the flow with the AJA software.
+	
+	\item Open the valve connecting the desired \ch{O2} source to the switch. 
+	
+	\item If you are using \ch{^{18}O2}, briefly open the valve on the bottle and close it again. The \ch{^{18}O2} in the line should then be enough for depositing a film, and this will avoid making a mistake that would waste the remaining gas.
+\end{enumerate}
+
+\subsection{Deposition}
+The sputter deposition  process for nominally 25 (10) nm of \ch{Ru^{18}O2} (\ch{Ir^{18}O2}) is as follows:
+\begin{enumerate}
+	\item Load the samples via the load lock, and heat the samples to the desired temperature. 400$^\circ$C gives crystalline, rutile films.
+	
+	\item Pre-clean the chamber with an argon plasma for 5 minutes. Use 20 ml/min Ar, 20 mTorr, and 35 Watts.
+	
+	\item Put the screen in front of the samples. Sputter titanium. Use 20 ml/min Ar, 3 mTorr, and 160 W. You may need to start the plasma at 10 mTorr and then ramp down. This step is to remove any residual oxygen in the chamber to achieve isotopic purity. (This step can be skipped when not doing isotope-labeled films.)
+	
+	\item After titanium has been sputtering for 15 minutes, remove the screen and allow it to keep sputtering, now onto the samples, for another three minutes. This establishes a $\approx$ 5 nm thick Ti sticking layer. After three minutes, close the shutter again and keep sputtering Ti for another three minutes before turning off the Ti plasma.
+	
+	\item Increase the pressure to 5 mTorr and lower the Ar flow rate to 5 ml/min. 
+	
+	\item Start the plasma on the Ru (Ir) target. Use 60 W (30 W).
+	
+	\item Start the \ch{^{18}O2} flow at 1 ml/min.
+	
+	\item Open the shutter to the Ru (Ir) target. 
+	
+	\item Time 1500 s (700 s), and then close the shutter
+	
+	\item Turn off the plasma.
+	
+	\item Turn off the gas flows.
+	
+	\item Let the samples cool before taking them out through the load lock.
+\end{enumerate}

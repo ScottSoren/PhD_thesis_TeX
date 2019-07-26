@@ -1,7 +1,11 @@
 \BOOKMARK [0][-]{chapter.1}{Tools}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Isotope labeling: tracking atoms}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Example experiment: RHE potential measurement in D2O}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Example experiment: CO stripping in H218O electrolyte}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Labeling the vacuum chamber}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{Other tools: Sputter deposition, ISS, and ICP-MS}{section.1.1}% 6
-\BOOKMARK [0][-]{subsection.1.1.4}{Bibliography}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Electorchemistry - mass spectrometry}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Quantitative mass spectrometry: counting molecules}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Isotope labeling: tracking atoms}{chapter.1}% 4
+\BOOKMARK [0][-]{figure.caption.34}{Bibliography}{}% 5
+\BOOKMARK [0][-]{appendix.A}{Setup Instructions}{}% 6
+\BOOKMARK [1][-]{section.A.1}{Sniffer setup at DTU}{appendix.A}% 7
+\BOOKMARK [1][-]{section.A.2}{ECMS-200A at CAS in Fuzhou}{appendix.A}% 8
+\BOOKMARK [1][-]{section.A.3}{Sputtering Ru18O2 and Ir18O2}{appendix.A}% 9
+\BOOKMARK [0][-]{appendix.B}{Python Packages Developed During this PhD Project}{}% 10
+\BOOKMARK [1][-]{section.B.1}{EC\137MS and EC\137Xray}{appendix.B}% 11
