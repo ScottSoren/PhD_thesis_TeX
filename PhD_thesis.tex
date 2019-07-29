@@ -20,6 +20,7 @@
 \captionsetup{font=small,labelfont=bf,margin={1cm,1cm}}
 
 \newtheorem{question}{Question}[chapter]
+\newtheorem{assertion}{Assertion}[chapter]
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[chapter]
@@ -40,7 +41,7 @@
 %\input{Decor/Title}
 %\input{Decor/Abstract}
 %\input{Decor/Foreword}
-\input{Decor/List_of_Papers}
+%\input{Decor/List_of_Papers}
 
 \setcounter{tocdepth}{2}
 \tableofcontents\thispagestyle{empty}\clearpage
@@ -52,21 +53,21 @@
 %\todo Cite Bandarenka active site paper in O2 chapter!
 %\todo Photos of Sniffer and of ECMS200A
 
-%\input{01_Intro/01_Intro}\clearpage
+\input{01_Intro/01_Intro}\clearpage
 
-\input{02_Tools/02_Tools}\clearpage
+%\input{02_Tools/02_Tools}\clearpage
 
 %%%\input{03_Hydrogen/03_Hydrogen}\clearpage % Not happening!
 
-\input{04_Oxygen/04_Oxygen}\clearpage
+%\input{04_Oxygen/04_Oxygen}\clearpage
 
-%\input{05_Impact/05_Impact}\clearpage
+\input{05_Impact/05_Impact}\clearpage
 	
 
 \addcontentsline{toc}{chapter}{Bibliography} %
-\bibliographystyle{unsrt} 
+\bibliographystyle{naturemag} 
 \bibliography{PhD_thesis.bib}
 
-\input{Appendices/Appendices}\clearpage
+%\input{Appendices/Appendices}\clearpage
 
 \end{document}
