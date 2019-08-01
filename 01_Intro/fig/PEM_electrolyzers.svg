@@ -12,11 +12,14 @@
  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
  version="1.1"
  id="svg3010"
- width="1005.0046"
+ width="965.94922"
  height="503.03577"
- viewBox="0 0 1005.0046 503.03577"
+ viewBox="0 0 965.94924 503.03577"
  sodipodi:docname="PEM_electrolyzers.svg"
- inkscape:version="0.92.4 (unknown)">
+ inkscape:version="0.92.4 (unknown)"
+ inkscape:export-filename="/home/scott/Dropbox/PhD_thesis/TeX/01_Intro/fig/PEM_electrolyzers.png"
+ inkscape:export-xdpi="300"
+ inkscape:export-ydpi="300">
 <metadata
  id="metadata3016">
 <rdf:RDF>
@@ -30,7 +33,19 @@
 </rdf:RDF>
 </metadata>
 <defs
- id="defs3014" />
+ id="defs3014">
+<clipPath
+ clipPathUnits="userSpaceOnUse"
+ id="clipPath3641">
+<rect
+ style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00157475;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+ id="rect3643"
+ width="310.7034"
+ height="223.54237"
+ x="655.24579"
+ y="275.39169" />
+</clipPath>
+</defs>
 <sodipodi:namedview
  pagecolor="#ffffff"
  bordercolor="#666666"
@@ -50,7 +65,7 @@
  fit-margin-bottom="0"
  inkscape:zoom="0.97520661"
  inkscape:cx="542.56682"
- inkscape:cy="289.47366"
+ inkscape:cy="289.47365"
  inkscape:window-x="81"
  inkscape:window-y="30"
  inkscape:window-maximized="0"
@@ -14299,7 +14314,9 @@ gg==
 "
  preserveAspectRatio="none"
  height="213.54752"
- width="380.00848" />
+ width="380.00848"
+ clip-path="url(#clipPath3641)"
+ transform="translate(0,4.2147016e-6)" />
 <image
  width="647"
  height="484"
@@ -20234,9 +20251,9 @@ rdZqrdZqrdb+Wa2G3qq1Wqu1Wqu1WvtXaf8fYLPayH5O43kAAAAASUVORK5CYII=
 "
  id="image3018"
  x="0"
- y="19.035751" />
+ y="19.035755" />
 <image
- y="22.976604"
+ y="22.976608"
  x="670.46661"
  id="image3593"
  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASEAAAErCAIAAAAe5KIqAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4
