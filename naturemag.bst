@@ -1154,7 +1154,7 @@ FUNCTION {article}
   %format.url output
   new.block
   format.note output
-  format.eprint output
+  %format.eprint output
   fin.entry
 }
 FUNCTION {book}
