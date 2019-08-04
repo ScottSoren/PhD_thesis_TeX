@@ -1,5 +1,5 @@
 
-\section{How much difference a millivolt makes}
+\section{How much difference a millivolt makes}\label{sec:millivolt}
 
 Answering Question \ref{q:impact} requires an estimate of how much hydrogen is produced by PEM electrolyzers in 2030, and some assumptions of how it is used.
 
@@ -51,7 +51,7 @@ where $V_\text{FC}$ is the voltage of the fuel cell and $\eta = V_\text{FC}/V_\t
 s = \sigma x P_0 \eta \frac{\Delta V}{V_\text{EC}}\,,\label{eq:savings}
 \end{equation}
 Where $\sigma$ is the carbon intensity of the fuel that hydrogen is replacing to generate $\Delta P$ of electricity.
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=1\textwidth]{05_Impact/fig/net_impact.png}
 	\caption{\textbf{(a)}, \ch{CO2} emissions (red, yellow, and red) and savings (green) associated with this PhD project with the assumptions described in the Figure and in the text. \textbf{(b)} Millivolts of improvement in electrolyzer operating potential needed to offset the \ch{CO2} emissions of this PhD project in one year as a function of the percentage of the electricity generated in Denmark (red), Europe (blue), or the world (black) that goes to \ch{H2} production. Several predicted \ch{H2} penetrations from literature are included with their area of study indicated: [A], Sgobbi et al, 2016, ref. \citen{Sgobbi2016}; [B], Budischak et al, 2013, ref. \citen{Budischak2013}; [C], Meibom and Karlsson, 2010, ref. \citen{Meibom2010}; [D], Jacobson et al, 2018, ref. \citen{Jacobson2018}; [E] Storgaard, 2019, ref. \citen{Storgaard2019_MSc}}
 	\label{fig:impact}
@@ -61,8 +61,9 @@ Plugging in the numbers from the assumptions above, the expectation value of the
 \begin{equation}
 s = 340 \left[\frac{\text{kg}_{\ch{CO2}}}{\text{MWh}}\right] \cdot 2 [\%] \cdot 3.1\!\cdot\! 10^9 \text{[MWh]} \cdot 46 [\%] \cdot \frac{0.05 \text{[mV]}}{1.7 \text{[V]}} = 293 \,[\text{t}_{\ch{CO2}}]
 \end{equation}
-This is very good news, because it is greater than the 122 tons of \ch{CO2} emissions that I estimated to result from this PhD project! This is illustrated in Figure \ref{fig:impact}a.
+This is very good news, because it is greater than the 122 tons of \ch{CO2} emissions that I estimated to result from this PhD project! This is illustrated in Figure \ref{fig:impact}a. For comparison, $\Delta V = 0.021$ mV saves 122 t\ch{CO2} in a year, balancing my PhD project. A whole millivolt, $\Delta V = 1.0$ mV, is worth 5.9 Mt\ch{CO2} in Europe per year, or about one sixth the \ch{CO2} emissions of Denmark in 2018. Every millivolt counts.
 
+\vspace{5mm}
 The problem is turned around in Figure \ref{fig:impact}b. Here, I am inquiring into the break-even point. I have set the savings $s$ from Equation \ref{eq:savings} equal to the costs $c$ from Equation \ref{eq:costs} and solved for $\Delta V$:
 \begin{equation}
 \Delta V = \frac{c V_\text{EC}}{\sigma x P_0 \eta}

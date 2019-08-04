@@ -1,8 +1,8 @@
 %\documentclass[11pt,a4paper,twoside]{report} % in my MSc Thesis
-\documentclass[11pt, a4paper, twoside]{book} % in Daniel's PhD Thesis
+\documentclass[twoside]{book} % in Daniel's PhD Thesis
 
 %\usepackage[top=3cm,]{geometry} % in my MSc Thesis
-\usepackage[inner=2.5cm, outer=1.5cm, top=3cm, bottom=2cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 
 %\usepackage{LukeThesisA4} % Daniel's PhD Thesis uses this. Gives me all kinds of problems.
 
@@ -15,11 +15,9 @@
 \usepackage{hyperref}
 \usepackage{cite}
 \usepackage{url}
-\usepackage{changepage}
-\usepackage{adjustbox}
 
 \usepackage{caption}
-\captionsetup{font=footnotesize,labelfont=bf,margin={1cm,1cm}}
+\captionsetup{font=small,labelfont=bf,margin={1cm,1cm}}
 
 \newtheorem{question}{Question}[chapter]
 \newtheorem{assertion}{Assertion}[chapter]
@@ -38,7 +36,6 @@
 
 \newcommand{\todo}[1]{\textcolor{red}{ToDo: #1}}
 
-\newcommand{\sectionbreak}{\clearpage} % start sections on new pages
 
 
 %\setlength{\parindent}{4em}
@@ -48,11 +45,8 @@
 
 \pagenumbering{roman}
 
-%\input{Decor/Outer_title} % for cardboard cover
-%\input{Decor/Inner_title} % for cardboard cover
-
-\input{Decor/Title}\clearpage
-\clearpage
+\input{Decor/Title}
+%\input{Decor/Inner_title}\clearpage
 \input{Decor/Abstract}\clearpage
 \input{Decor/Foreword}\clearpage
 \input{Decor/List_of_Papers}\clearpage
@@ -64,24 +58,25 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\input{01_Intro/01_Intro}\clearpage
+%\input{01_Intro/01_Intro}\clearpage
 
 \input{02_Tools/02_Tools}\clearpage
 
 %%%\input{03_Hydrogen/03_Hydrogen}\clearpage % Not happening!
 
-\input{04_Oxygen/04_Oxygen}\clearpage
+%\input{04_Oxygen/04_Oxygen}\clearpage
 
-\input{05_Impact/05_Impact}\clearpage
-	
+%\input{05_Impact/05_Impact}\clearpage
+
+%\input{05_Impact/conclusion}
+
 %Check out Appendix \ref{app:EC_MS} % test
 
-
-\input{Appendices/Appendices}\clearpage
 
 \addcontentsline{toc}{chapter}{Bibliography} %
 \bibliographystyle{naturemag} 
 \bibliography{PhD_thesis.bib}
 
+\input{Appendices/Appendices}\clearpage
 
 \end{document}

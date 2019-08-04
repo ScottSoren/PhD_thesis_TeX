@@ -1,7 +1,9 @@
 
 \begin{table}
-	
+\begin{adjustbox}{totalheight=\textheight-2\baselineskip}%
+	%\resizebox*{!}{\dimexpr\textheight-2\baselineskip\relax}{%
 	\begin{tabular}{p{3cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
+		
 		Electrocatalyst & Preparation & Labeling & Electrolyte & Experiment & Result & Citation \\
 		\hline
 		Pt & On DEMS membrane, oxidized in 98\% \ch{H2^{18}O} & $\le$ 98\% \ch{^{18}O} & Natural 0.5 M \ch{H2SO4} or 1.0 M KOH & LSV, DEMS & no excess \ch{^{18}O} evolved & Willsau, 1985\cite{Willsau1985}\\
@@ -42,6 +44,10 @@
 		\hline
 		Hydrous \ch{IrO_x} & Potential cycling of sputtered \ch{Ir^{18}O2} film in 97\% \ch{H2^{18}O} & $\approx$ 97\% \ch{^{18}O}& Natural 0.1 M \ch{HClO4} & CP, OLEMS & some \ch{^{18}O} evolved& Geiger, 2018\cite{Geiger2018}\\
 		\hline
+		\normalsize
 	\end{tabular}
+%}
+\end{adjustbox}
 	\caption{Isotope-labeling experiments in the water oxidation electrocatalysis literature}\label{tab:lattice_lit}
 \end{table}
+

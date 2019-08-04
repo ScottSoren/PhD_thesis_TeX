@@ -47,6 +47,7 @@ Equation \ref{eq:Far} implicitly assumes that \textit{all} of the current $I$ go
 	}
 	\label{fig:internals}
 \end{figure}
+\clearpage % Otherwise this Figure pushes all the other figures to the end of the Chapter
 Figure \ref{fig:internals} shows calibrations for \ch{O2}, \ch{H2}, and \ch{CO2} by these reactions. These calibration data are not as flawless as those in the SI to Paper \ref{Trimarco2018}. They were chosen for this Thesis because, together with the data in Figure \ref{fig:internals_2} below, which were taken on the same day, they include the largest number of directly comparable calibrations. I collected the data in Figures \ref{fig:internals} and \ref{fig:internals_2} together with Anna Winiwarter to obtain a full set of sensitivity factors to calibrate the results of propene stripping experiments that build on the results in Paper \ref{Winiwarter2019}.
 
 The full dataset is shown in Figure \ref{fig:internals}a. From the left: the dataset starts with the electrode in \ch{CO}-saturated electrolyte. The electrode is subject to several periods of 2 minutes of constant-current CO oxidation, inter-spaced by scans to a \textit{resting potential} of 0.5 V vs RHE to separate the peaks. There is a small gap in the MS data around 4500s due to a computer glitch. After the \ch{CO2} calibration, the carrier gas is changed from \ch{CO} to He, and then to \ch{H2} to measure the signal due to \ch{H2} carrier gas flux through the capillary (which will be discussed in Subsection \ref{subsec:capillary}) and to calibrate the reference electrode. (We actually realize after the anodic scan at $\approx$ 7700 s that we had forgotten to strip off the adsorbed \ch{CO} from before, which would have poisoned the electrode for HER/HOR, and so we repeated the RHE calibration.) Then the carrier gas was changed back to \ch{He} for \ch{O2} calibration by OER. Again, we used 2-minute constant current steps inter-spaced by time at a resting potential to get separated peaks in the m/z=32 signal. Then we switched the carrier gas briefly to \ch{O2} to measure the signal due to \ch{O2} carrier gas flux through the capillary, and switched back to \ch{He}. Finally, after cycling the potential to clean off any contaminants that may have adsorbed or deposited on the electrode, we calibrated \ch{H2} by HER, again with constant-current measurements inter-spaced by a resting potential.
@@ -66,7 +67,7 @@ The differential approach is usually good enough for \ch{O2} (Figure \ref{fig:in
 For \ch{CO2} (Figure \ref{fig:internals}d), which has much slower mass transport due to its higher solubility in the electrolyte [Paper \ref{Trimarco2018}], we have to use the integral approach. Here, the highlighted areas show the time intervals for which $\dot{n}^{\ch{CO2}}_\text{el}$ (bottom panel) and $S_\text{M44}$ (top panel) were taken. The two calibration points affected by the gap in the MS data were excluded.
 
 The resulting calibration curves are plotted in Figure \ref{fig:internals}e. The top x-axis and right y-axis are in integrated units, for \ch{CO2}. The proportionality between the two x-axes and the two y-axes are identical such that the slopes, which are the respective sensitivity factors, are directly comparable. The sensitivity factors, resulting from least-squares-fitting without forcing through zero, are written in the plots. The dotted lines shown have the sensitivity factor as their slope but \textit{are} forced through zero, to show a non-ideality typical of these calibration curves: there is a small, approximately constant, offset. This offset implies that there is some charge passed through the electrode which cannot be accounted for by Reactions \ref{rxn:OER2}, \ref{rxn:HER2p2}, and \ref{rxn:COox2}. In all cases, it can possibly be attributed to processes oxidizing or reducing the electrode, or adsorbing or desorbing species from its surface. This illustrates the importance of always being critical of the assumptions of 100\% Faradaic efficiency, even for simple reactions, and using multiple current densities for calibration.
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=1\textwidth]{02_Tools/fig/internal_calibrations_2.png}
 	\caption{Calibration experiment for propane (\ch{C3H8}) by reduction (hydrogenation) of propene (\ch{C3H6}) on Pt in 1.0 M \ch{HClO4}. \textbf{(a)} The entire experimental dataset, taken immediately after that in Figure \ref{fig:internals}a. \textbf{(b)}, A zoom-in is shown for the propane calibration. The data points at larger current, where propene reduction is mass-transport limited and some of the current goes to HER are excluded. \textbf{(c)}, The resulting calibration curve is plotted as near-steady-state signal vs production rate.
 	}
@@ -85,9 +86,9 @@ Figure \ref{fig:internals_2} shows a calibration for an additional reaction that
 I first encountered this reaction while doing the propene striping experiments reported in Paper \ref{Winiwarter2019}. Briefly, we found that the tendency of adsorbed propene to strip off from a palladium surface as propane or propene on a cathodic sweep correlates with the coverage on the surface, motivating a mechanism for the propene oxidation reaction (the main subject of that paper) in which surface coverage guides the reaction pathway towards certain intermediates.  This is, in my opinion, a fantastic story, and was a great project to be part of, though it is out of the scope of this Thesis. I highly recommend the paper to an interested reader of this Thesis. Anna Winiwarter has since expanded on those EC-MS experiments to probe propene reactivity. However, propene reduction is included here only because it demonstrates well some of the challenges and opportunities in quantitative EC-MS.
 
 The first challenge in quantification of propane and propene is that there is a significant overlap in their mass spectra (Figure \ref{fig:spectra}). Propane can itself be detected and quantified without interference at its most prominent mass fragment, m/z=29. The sensitivity factor of propane at m/z=29, $F_{\text{M29}}^{\ch{C3H8}}$, is determined by Faradaic propene reduction in Figure \ref{fig:internals_2}b and c. 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=0.75\textwidth]{02_Tools/fig/mass_spectra.png}
+	\includegraphics[width=0.8\textwidth]{02_Tools/fig/mass_spectra.png}
 	\caption{Mass spectra of propene (\ch{C3H6}, red), propane (\ch{C3H8}, green and hatched), and \ch{CO2} (brown) from NIST\cite{NIST}
 	}
 	\label{fig:spectra}
@@ -171,6 +172,7 @@ With the chip thus calibrated, we can use Equation \ref{eq:capillary} with $l_\t
 
 \begin{table}
 	\centering
+	\resizebox{\textwidth}{!}{%
 	\begin{tabular}{c|c|c|c|c|c||c|c|c|c||c}
 		Molecule & $\eta$ & $s$ & $m$ & $x^i$ & $\dot{n}_\text{cap}^i$ & dataset & time & m/z=$M$ & $F_M^i$ & $F_M^i$ (EC) \\
 		& / [$\mu$Pa$\cdot$s] & / [\AA] & / [amu]& & / [nmol/s] & & / [s]& & / [C/mol] & / [C/mol] \Bstrut\\
@@ -193,7 +195,9 @@ With the chip thus calibrated, we can use Equation \ref{eq:capillary} with $l_\t
 		 \ref{fig:internals_2}a & 9850 & 44 & 1.32 & 1.23 \\
 		\ch{C3H6} & 8.85 & 4.50 & 42.1 & 1& 15.11 & 
 		 \ref{fig:internals_2}a & 4400 & 41 & 1.22 & - \\
+	\normalsize
 	\end{tabular}
+	}
 \caption{External calibrations. The flow properties of the carrier gas $\eta$, $s$, and $m$ as well as the fraction $x^i$ of component $i$ are used to calculate the flux of $i$ through the capillary, $\dot{n}^i_\text{cap}$. This is compared to the measured signal at a given m/z in a given dataset, where the dataset refers to Figure \ref{fig:internals} or \ref{fig:internals_2} of the previous Subsection. Dataset \ref{fig:internals} was taken with a chip with $l_\text{eff}=0.99$ mm and Dataset \ref{fig:internals_2} was taken with a chip wtih $l_\text{eff}=0.86$ mm, $l_\text{eff}$ being used to calculate $\dot{n}^i_\text{cap}$. The signal at m/z=$M$ was averaged over 50 s centered at the time indicated, chosen for a steady interference-free measurement. The sensitivity factor $F_M^i$ is the ratio of that signal to $\dot{n}_\text{cap}^i$. This is compared, when possible, to $F_M^i$ calculated by electrochemical (internal) calibration.
 }
 \label{tab:externals}
@@ -232,9 +236,9 @@ where $I_{M'}^i$ is the intensity of mass fragment $M'$ in the electron ionizati
 
 The processes after fragmentation can be assumed to only depend on the fragment mass-to-charge ratio $M$. Both of these processes, quadrupole transmission and SEM amplication factor, will also depend on the ion acceleration. They can be grouped into a function $T(M)$ which I will refer to as the \textit{transmission function}, implying that the transmission through the quadrupole is gives most of the mass dependence, even though I'm not sure this is true.
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=\textwidth]{02_Tools/fig/calibration_results.png}
-	\caption{Measure sensitivity factor $F_M^i$ vs predicted sensitivity factor $f_M^i$ for two guesses at the transmission function: \textbf{(a)}, inversely proportional with the m/z ratio; and \textbf{(b)}, inversely proportional with the square root of the m/z ratio. The measured sensitivity factors, which are shown in Table \ref{tab:externals}, are determined via capillary flux (triangles) or an electrochemical reaction (squares). }
+	\caption{Measured sensitivity factor $F_M^i$ vs predicted sensitivity factor $f_M^i$ for two guesses at the transmission function: \textbf{(a)}, inversely proportional with the m/z ratio; and \textbf{(b)}, inversely proportional with the square root of the m/z ratio. The measured sensitivity factors, which are shown in Table \ref{tab:externals}, are determined via capillary flux (triangles) or an electrochemical reaction (squares). }
 	\label{fig:transmission}
 \end{figure}
 
@@ -256,7 +260,7 @@ seems to give a good fit. The best-fit line of proportionality between $F$ and $
 \vspace{5mm}
 
 There is, however, an important exception: if the carrier gas influences the sensitivity of the mass spectrometer, then all bets are off. This actually seems to be the case when propene is the carrier gas. Figure \ref{fig:internals_2} shows an internal calibration for propane by propene reduction. In the higher-current steps in Figure \ref{fig:internals_2}a, propene reduction is mass-transport limited and hydrogen is also produced. Assuming that there are no Faradaic processes other than propene reduction to propane and hydrogen evolution, the amount of hydrogen produced can be determined from the electrode current and the calibrated propane signal. Figure \ref{fig:propene_transmission}a shows the data used to test the \ch{H2} calibration in propene, calibrated using the \ch{H2} sensitivity factor calculated in He. Faradaic analysis shows that the \ch{H2} signal is consistently $\approx 3$ times larger than expected based on subtracting the calibrated propane signal from the total current density, and using the calibration of \ch{H2} at m/z=2 by HER in He carrier gas. This implies that the sensitivity factor of \ch{H2} at m/z=32 ($F_\text{M2}^{\ch{H2}}$) with propene as the carrier gas is $\approx 3$ times larger than it is with He as a carrier gas. The sensitivity factors for \ch{H2} at m/z=2 and for propane at m/z=29 are included, versus the sensitivity factors predicted by Equation \ref{eq:rsf} with $T(M)=M^{-1/2}$, in Figure \ref{fig:propene_transmission}b. They are both way above the trendline set by the calibration factors measured in other carrier gases.
-\begin{figure}[h!]
+\begin{figure}[b!]
 	\includegraphics[width=\textwidth]{02_Tools/fig/H2_in_propene_experiment.png}
 	\caption{Non-ideality with propene as carrier gas: \textbf{(a)}, Propene reduction + HER, data from Figure \ref{fig:internals_2}a. \textbf{(b)}, Measured vs predicted calibration factors including propane at m/z=29 measured by propene reduction and \ch{H2} at m/z=2 measured by HER in propene, which do not fit the trend of the other masses. A transimission function of $T(M) = M^{-1/2}$ was used for the predicted calibration factor. Propene was measured at m/z=41 and propane at m/z=29. The others analytes are measured at the same masses as in Figure \ref{fig:transmission}. The green dot shows the prediction for the sensitivity factor of propane at m/z=29.}
 	\label{fig:propene_transmission}
@@ -284,13 +288,13 @@ If you can produce a known number of molecules of your analyte by an electrochem
 
 \item 
 \textit{External calibration}
-\footnote{External calibration is implemented with the function \texttt{point\_calibration} of the \texttt{EC\_MS} python package (Appendix \ref{app:EC_MS}).}
+\footnote{External calibration is implemented with the function \texttt{point\_calibration} of the \texttt{EC\_MS} python package.}
 , Subsection \ref{subsec:capillary}:
 
 If you have $i$ available as a gas, either pure or diluted, then you can fill the chip with this gas and measure the signal at $M$. However, this requires that you know the capillary flux through the chip. The capillary flux can be calculated by Equation \ref{eq:capillary}, but only if the capillary dimensions are known, and in practice these dimensions vary a bit from chip to chip. Thus, external calibration requires a \textit{chip calibration}.
 \begin{itemize}
 	\item \textit{Chip calibration}
-	\footnote{Chip calibration is implemented with the function \texttt{chip\_calibration} of the \texttt{EC\_MS} python package (Appendix \ref{app:EC_MS})}
+	\footnote{Chip calibration is implemented with the function \texttt{chip\_calibration} of the \texttt{EC\_MS} python package.}
 	, Subsection \ref{subsec:capillary}:
 	
 	A chip calibration means determining the effective capillary length $l_\text{eff}$ that can take the place of $l_\text{cap}$ in Equation \ref{eq:capillary} so that it predicts the measured flux of an analyte with a sensitivity factor determined by internal calibration. Typically, this means determining $F_\text{M32}^{\ch{O2}}$ using OER, and then measuring the m/z=32 signal while the chip is open to air.
@@ -321,7 +325,7 @@ This quantification platform can, however, be extended to applications that do n
 	
 	\item Determine the transmission function $T(M)$ that gives the best fit to a line of proportionality between the measured sensitivity factors ($F$) determined by external calibration and the predicted sensitivity factors ($f$) calculated for each of the gases. Then determine $F_\text{M31}^{\ch{CH3OH}}$ with predictive calculation, by calculating $f_\text{M31}^{\ch{CH3OH}}$ and multiplying by the proportionality constant.
 \end{enumerate} The functions of \texttt{EC\_MS} do each step of the data analysis and calculations, making the whole procedure described above quite quick and painless. Furthermore, steps 1 through 4 need only be done once, so long as the microreactor with the calibrated capillary flux is not lost or damaged. (It just so happens that EC-MS membrane chips can go on the microreactor setup but not vice versa, or this procedure could be a step shorter.)
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=\textwidth]{02_Tools/fig/calibration_results_sniffer2.png}
 	\caption{\textbf{(a)}, Signal at m/z=28 with 1 bar \ch{CO} in the membrane chip as carrier gas for experiments done over a period from September 2016 to May 2017. The date on the x-axis is written as \texttt{yyMdd} with \texttt{M}=A representing January, B representing February, etc. \textbf{(b)}, Internal, external, and predicted calibrations for the dataset used in Paper \ref{Trimarco2018}. This is a correction to Figure S6b from the SI of that paper.}
 	\label{fig:CuNPs}

@@ -5,7 +5,7 @@
 \BOOKMARK [1][-]{section.2.1}{Electorchemistry - mass spectrometry}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.2}{Quantitative mass spectrometry: counting molecules}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.3}{Isotope labeling: tracking atoms}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Oxygen}{}% 8
+\BOOKMARK [0][-]{chapter.3}{Isotope-Labeling Studies in Oxygen Evolution Catalysis}{}% 8
 \BOOKMARK [1][-]{section.3.1}{You have to see the O2!}{chapter.3}% 9
 \BOOKMARK [1][-]{section.3.2}{How low can we go?}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.3}{To leave or to remain in the lattice}{chapter.3}% 11
@@ -13,20 +13,22 @@
 \BOOKMARK [0][-]{chapter.4}{The Net Carbon Impact of this PhD}{}% 13
 \BOOKMARK [1][-]{section.4.1}{Burning}{chapter.4}% 14
 \BOOKMARK [1][-]{section.4.2}{How much difference a millivolt makes}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.3}{Conclusion and Outlook}{chapter.4}% 16
-\BOOKMARK [0][-]{section.4.3}{Bibliography}{}% 17
-\BOOKMARK [0][-]{appendix.A}{Setup Instructions}{}% 18
-\BOOKMARK [1][-]{section.A.1}{Sniffer setup at DTU}{appendix.A}% 19
-\BOOKMARK [1][-]{section.A.2}{ECMS-200A at CAS in Fuzhou}{appendix.A}% 20
-\BOOKMARK [1][-]{section.A.3}{Sputtering Ru18O2 and Ir18O2}{appendix.A}% 21
-\BOOKMARK [0][-]{appendix.B}{Papers from this PhD Project}{}% 22
-\BOOKMARK [1][-]{section.B.1}{Enabling real-time detection of electrochemical desorption phenomena with sub-monolayer sensitivity}{appendix.B}% 23
-\BOOKMARK [1][-]{section.B.2}{Impact of nanoparticle size and lattice oxygen on water oxidation on NiFeOxHy}{appendix.B}% 24
-\BOOKMARK [1][-]{section.B.3}{Towards an Atomistic Understanding of Electrocatalytic Partial Hydrocarbon Oxidation: Propene on Palladium}{appendix.B}% 25
-\BOOKMARK [1][-]{section.B.4}{Absence of Oxidized Phases in Cu under CO Reduction Conditions}{appendix.B}% 26
-\BOOKMARK [1][-]{section.B.5}{Progress and Perspectives of Electrochemical CO2 Reduction on Copper in Aqueous Electrolyte}{appendix.B}% 27
-\BOOKMARK [1][-]{section.B.6}{In Preparation - Desorbing uphill: Anodic Hydrogen Evolution on Cu and Ru Electrodes}{appendix.B}% 28
-\BOOKMARK [1][-]{section.B.7}{In Preparation - Mechanistic study of oxygen evolution on RuO2 down to 60 mV overpotential}{appendix.B}% 29
-\BOOKMARK [0][-]{appendix.C}{Python Packages Developed During this PhD Project}{}% 30
-\BOOKMARK [1][-]{section.C.1}{EC\137MS}{appendix.C}% 31
-\BOOKMARK [1][-]{section.C.2}{EC\137Xray}{appendix.C}% 32
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 16
+\BOOKMARK [0][-]{appendix.A}{Setup and technique details and instructions}{}% 17
+\BOOKMARK [1][-]{section.A.1}{Sniffer setup at DTU}{appendix.A}% 18
+\BOOKMARK [1][-]{section.A.2}{ECMS-200A at CAS in Fuzhou}{appendix.A}% 19
+\BOOKMARK [1][-]{section.A.3}{Spectro Inlets}{appendix.A}% 20
+\BOOKMARK [1][-]{section.A.4}{Sputtering Ru18O2 and Ir18O2}{appendix.A}% 21
+\BOOKMARK [1][-]{section.A.5}{ICP-MS}{appendix.A}% 22
+\BOOKMARK [0][-]{appendix.B}{Papers from this PhD Project}{}% 23
+\BOOKMARK [1][-]{section.B.1}{Enabling real-time detection of electrochemical desorption phenomena with sub-monolayer sensitivity}{appendix.B}% 24
+\BOOKMARK [1][-]{section.B.2}{Impact of nanoparticle size and lattice oxygen on water oxidation on NiFeOxHy}{appendix.B}% 25
+\BOOKMARK [1][-]{section.B.3}{Towards an Atomistic Understanding of Electrocatalytic Partial Hydrocarbon Oxidation: Propene on Palladium}{appendix.B}% 26
+\BOOKMARK [1][-]{section.B.4}{Absence of Oxidized Phases in Cu under CO Reduction Conditions}{appendix.B}% 27
+\BOOKMARK [1][-]{section.B.5}{Progress and Perspectives of Electrochemical CO2 Reduction on Copper in Aqueous Electrolyte}{appendix.B}% 28
+\BOOKMARK [1][-]{section.B.6}{In Preparation - Desorbing uphill: Anodic Hydrogen Evolution on Cu and Ru Electrodes}{appendix.B}% 29
+\BOOKMARK [1][-]{section.B.7}{In Preparation - Mechanistic study of oxygen evolution on RuO2 down to 60 mV overpotential}{appendix.B}% 30
+\BOOKMARK [0][-]{appendix.C}{Python Packages Developed During this PhD Project}{}% 31
+\BOOKMARK [1][-]{section.C.1}{EC\137MS}{appendix.C}% 32
+\BOOKMARK [1][-]{section.C.2}{EC\137Xray}{appendix.C}% 33
+\BOOKMARK [0][-]{section.C.2}{Bibliography}{}% 34

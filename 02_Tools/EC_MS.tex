@@ -2,16 +2,16 @@
 
 Mass spectrometry is one of the most versatile and widely used analysis tools in science\cite{Gross2007, Harris2010}. It also has rich and fascinating history\cite{Griffiths2008}, some notable points in which are summarized in Figure \ref{fig:MS_timeline}. In essence, mass spectrometry is the study and use of methods to separate charged particles in high vacuum by their mass-to-charge (m/z) ratio. The mass-to-charge ratio of  all molecular and atomic ions (at non-relativistic energies) is very close to an integer multiple of one atomic mass unit per fundamental charge, and so the m/z ratio is usually stated simply as an integer with the implied units of [atomic mass unit per fundamental charge]. Some mass spectrometers have such high resolution that they can separate ions with the same nominal (integer) m/z ratio\cite{Gross2007}, but for the quadrupole mass spectrometers used in this PhD thesis, m/z is in effect an integer.
 
-\begin{figure}[h!]
+\begin{figure}[p]
 	\centering
-	\includegraphics[height=0.8\textheight]{02_Tools/fig/MS_timeline.png}
+	\includegraphics[height=0.85\textheight]{02_Tools/fig/MS_timeline.png}
 	\caption{Brief history of mass spectrometry. Most events are described in ref. \citen{Griffiths2008} and at \url{https://en.wikipedia.org/wiki/History_of_mass_spectrometry}. Several later events focus on the coupling of electrochemistry and mass spectrometry: [A], ref. \citen{Hoch1963}; [B], ref. \citen{Bruckenstein1971}; [C], ref. \citen{Wolter1984}; [D], ref. \citen{Wonders2006}; [E], ref. \citen{Henriksen2009}; [F], ref. \citen{Trimarco2015}: [G], Paper \ref{Trimarco2018}.}
 	\label{fig:MS_timeline}
 \end{figure}
 
 The early development of mass spectrometry was inseparable from the fundamental study of how charged matter behaves under electric and magnetic fields in vacuum, and thus closely tied to many fundamental discoveries in early physics. This includes the discovery of the electron, the discovery of relativistic effects, and the discovery of isotopes. Mass spectrometry has been put to use in an astounding number of applications, including a prominent unsavory one: a modified mass spectrometer was used in one of the purification steps of \ch{^{235}U} for the first atomic bombs (diffusion-based methods and centrifugation have since become much more practical methods of separating this isotope)\cite{Hewlett1962}. Other applications include, for example, trace element analysis (ICP-MS) and protein sequencing (MALDI-TOF).
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=\textwidth]{02_Tools/fig/MS_diagrams.png}
 	\caption{Diagram of the components of a quadrupole mass spectrometer (QMS): \textbf{(a)}, electron impact ionization; \textbf{(b)} quadrupole mass separation; and \textbf{(c)},  secondary electron multiplier detection. Adapted from J. Gross, ``Mass Spectrometry'', ref. \citen{Gross2007}. Figure numbers in the image refer to that textbook.}
 	\label{fig:MS}
@@ -37,7 +37,7 @@ Our version of electrochemistry - mass spectrometry involves making the interfac
 
 This strategy gives a number of unique advantages, and also some disadvantages, which make it ideal for fundamental studies but (in its present implementation) less ideal for high-current \textit{in-operando} studies. For the latter type of study, conventional flow-cell differential electrochemistry - mass spectrometry (DEMS)\cite{Baltruschat2004} retains some advantages. Ours should therefore be thought of as a distinct technique, which we refer to as \textit{chip EC-MS} or just \textit{EC-MS}.
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{02_Tools/fig/chip_ECMS_diagram.png}
 	\caption{\textbf{(a)} Schematic diagrams of chip-based EC-MS and photographs of the membrane chip, adapted from Paper \ref{Trimarco2018} \textbf{(b-c)} Visual microscopy images of the (a) front of the chip showing the membrane, scale bar = 20$\mu$m and (b) back of the chip showing the capillary through the transparent Pyrex, scale bar = 200$\mu$m.}
@@ -46,7 +46,7 @@ This strategy gives a number of unique advantages, and also some disadvantages, 
 
 Figure \ref{fig:chipECMS} includes schematic diagrams of the key components of chip EC-MS. Membrane chips are fabricated at wafer-scale from semiconductor-on-oxide (SOI) wafers with standard clean-room techniques. Photographs of the front and the back of the chip, are shown in the bottom right corner. The photograph of the front of the chip is colorful due to the diffraction of visible light by the chip's membrane. The membrane consists of thousands of holes with a diameter of 2.5 $\mu$m patterned over a circle 7 mm in diameter by UV lithography. Below the membrane is an empty volume, called the \textit{sampling volume} formed by etching of the SOI's oxide layer. The sampling volume is connected to the back of the chip by four holes formed by deep reactive ion etching (DRIE) from the back. A series of gas channels are formed on the back by UV lithography: a wide carrier gas reservoir channel connecting the carrier gas inlet to the carrier gas outlet (indicated in blue in the chip schematic at the top right of Figure \ref{fig:chipECMS}a, three carrier gas delivery channels (intended to achieve symmetric gas flow - indicated by one green channel in the schematic), and a capillary connecting to the mass spectrometer inlet (red in the schematic). These gas channels are sealed by anodic bonding to a Pyrex glass wafer, such that the finished chip is silicon on the top and glass on the bottom. The holes for the carrier gas inlet, carrier gas outlet, and mass spectrometer inlet are formed in the Pyrex with a \ch{CO2} laser prior to bonding. This membrane chip design is protected by a patent\cite{Trimarco_Patent} and commercialized by Spectro Inlets ApS.
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{02_Tools/fig/chipECMS_diagrams_2.png}
 	\caption{Diagrams of \textbf{(a)} the cell + working electrode assembly and \textbf{(b)} The cell + chip + interface block assembly. \textbf{(c)} Photo of the setup in use. From Paper \ref{Trimarco2018}}
@@ -67,60 +67,9 @@ As mentioned at the start of this chapter, chip EC-MS has two advantages over co
 
 Since electrolyte is not flowed during experiments, the cell is a a \textit{stagnant thin-layer} cell. The working volume functions as a perfect diffusion layer, making it relatively easy to model mass-transport in the system. This mass-transport model was first presented in my Master's Thesis\cite{Scott2016_MSc}, and later refined and verified experimentally in Paper \ref{Trimarco2018}. I will not redevelop the model here, but I will use its results from time to time throughout this Thesis.
 
-\subsection{Chip EC-MS: implementation}\label{subsec:setups}
+In practice, an external system for vacuum and gas handling is needed to realize the advantages of high sensitivity and quick reactant gas dosing and purging made possible by chip EC-MS. This Appendix describes two such vacuum systems that I worked on during this PhD project. The vast majority of my work was done on the so-called ``Sniffer setup'' at DTU. During my external stay in professor Zhenhai Wen's group at the Chinese Academy of Sciences (CAS) in Fuzhou, I designed a more compact version, which became the EC-MS 200A. Valve diagrams and descriptions of these setups are shown in Appendix \ref{app:instructions}.
 
-In practice, an external system for vacuum and gas handling is needed to realize the advantages of high sensitivity and quick reactant gas dosing and purging made possible by chip EC-MS. This Subsection describes two such vacuum systems that I worked on during this PhD project. The vast majority of my work was done on the so-called ``Sniffer setup'' at DTU. During my external stay in professor Zhenhai Wen's group at the Chinese Academy of Sciences (CAS) in Fuzhou, I designed a more compact version, which became the EC-MS 200A. A reader who is not interested in these practical details may wish to skip this Subsection. 
-
-In the spirit of making this Thesis useful to my colleagues, Appendix \ref{app:instructions} describes procedures for changing chip and changing carrier gas for each of these setups with reference to the valve diagrams.
-
-\vspace{1cm}
-\textbf{\large The Sniffer Setup at DTU:}
-
-\begin{figure}[h!]
-	\includegraphics[width=\textwidth]{02_Tools/fig/setup_sniffer.png}
-	\caption{Valve diagram of EC-MS setup at DTU. Adapted from Paper \ref{Trimarco2018}. Red: components installed since that publication. Green: The 6-way valve was removed since then as well as the pneumatic valves before the pressure controllers, which were re-purposed. Blue: The interface block, as well as the valve right before it, were replaced to minimize the intervening volume, enabling faster exchange of gases.}
-	\label{fig:sniffer}
-\end{figure}
-Figure \ref{fig:sniffer} shows a valve diagram of the sniffer setup. Most of this setup was built during Daniel Trimarco's PhD project\cite{Trimarco2017_PhD}, and described in Paper \ref{Trimarco2018}. Colors indicate the parts that I have removed (green) or added (red) since Paper \ref{Trimarco2018}'s publication.
-
-On the left of the diagram are mass flow controllers (MFC's) which can be used to switch between up to four gases at time. Switching between gases sharing an MFC, f.eks. Ar and He, requires pumping down behind the MFC through a line not shown. Moving right, we refer to the volume between Valves 7, 8, 9, 10, 11, and 12 and PC 1 as the \textit{gas manifold}. The gas manifold can be evacuated through Valve 7 and filled up from one of the MFC's while regulating the pressure with a pressure controller (PC), PC1.
-
-Carrier gas from the gas manifold enters the interface block via Valve 8. The interface block guides it through the carrier gas reservoir channel of the chip, from which it fills the chip's sampling volume and saturates the electrochemical environment. Fast carrier gas exchange thus requires that the volume between valve 8 and the chip, the \textit{carrier gas inlet volume} is as small as possible. This is because the carrier gas inlet volume, unlike the gas manifold, cannot be pumped down, as the resulting vacuum in the sampling volume of the chip would suck in electrolyte. The design of the carrier gas inlet volume can also be optimized with regards to flow patterns to minimize mixing of the old and new carrier gas. 
-
-We refer to the volume between PC1, PC2, and Valves 1, 5, 6, and 7 as the \textit{pumping manifold}. There are actually three possible ways to pump on the pumping manifold: (1) Directly to the \textit{roughing pump} (RP) through Valve 6, or (2-3) through a buffer volume and then a \textit{turbo molecular pump} (TMP or just turbo pump) via either a (2) valve 2 and a needle valve or (3) a gate valve. 
-%Of these options, the direct roughing pump connection is the only one that can quickly remove a large amount of gas, as this would damage the turbo pump. Valve 14 should be closed while gas is fed directly to the roughing pump, as the pressure behind the turbo pump must also be kept low during operation. On the other hand, the turbo pump is required to reach high vacuum, which it can do slowly for a moderate amount of gas through the needle valve or quickly for a small amount of gas through the gate valve.
-
-During operation, carrier gas is flowing from the gas manifold to the pumping manifold through the chip, and its pressure is regulated by PC2, which is set to 1 bar for all of the experiments in this Thesis. Excess carrier gas flows through PC2 to the pumping manifold where it is ultimately removed through the roughing pump, typically via the buffer volume and needle valve, so that valve 14 can remain open.
-
-When a new chip is installed, the \textit{post-capillary volume} bound by the chip, Valve 13, and Valve 5 is vented to atmospheric pressure, and must be pumped down to high vacuum before connecting the experiment to the mass spectrometer. The mass spectrometer is always held at high vacuum by its own designated turbo and roughing pumps. The mass spectrometer of the sniffer setup is a Pfeiffer QMA125.
-
-The procedures for chip pump-down and carrier gas exchange are described in Appendix \ref{app:sniffer}.
-
-\vspace{1cm}
-\textbf{\large The ECMS-200A in Fuzhou:}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.75\textwidth]{02_Tools/fig/setup_Fuzhou.png}
-	\caption{Valve diagram of EC-MS setup at Fuzhou. In reality, at the time of writing this thesis, the pressure controller is actually a modified pressure regulator, which works but is not as stable.}
-	\label{fig:Fuzhou}
-\end{figure}
-
-The sniffer setup described above can be considered a ``delux setup'' with an excess of components to maximize functionality. The group in Fuzhou asked me to design a ``budget setup'' which captured the central advantages of chip EC-MS with as few components as possible. They then built my design, shown in Figure \ref{fig:Fuzhou} with the outside help from a Chinese mass spectrometer company, Quantang Instruments. Much to my frustruation, Quantang built a box around the valve system, making it quite tedious to make changes to the system, and put their logo and the name ECMS200A on the box.
-
-All of the concepts are the same as for the sniffer setup, but the operation is different. The procedures for chip pump-down and carrier gas exchange are described in Appendix \ref{app:Fuzhou}. The cost of having one less Turbo pump is the need to wait for long pumping periods and to turn off the filament of the mass spectrometer when changing chips. The carrier gas exchange procedure is actually slightly simpler than that of the sniffer setup and saves three MFC's and a PC. The only disadvantage is that, with only one MFC, it is not easy to prepare a controlled gas mixture (a functionality I have rarely used on the sniffer setup).
-
-\vspace{1cm}
-\textbf{\large Spectro Inlets:}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.75\textwidth]{02_Tools/fig/spectro.png}
-	\caption{Photos of the setup at Spectro Inlets ApS. From their website: \url{https://spectroinlets.com/}}
-	\label{fig:spectro}
-\end{figure}
-Finally, I should mention that there is now a commercially available setup which combines the best of both worlds: The functionality of the Sniffer setup and the simplicity and compactness of the ECMS200A. This is made possible in part due to some custom vacuum components. The setup, sold by Spectro Inlets ApS, is shown in the photographs in Figure \ref{fig:spectro}. I have been involved in conversations aiding the development of this setup, as a kind of test user, but can't go to detail here on its design. The Spectro Inlets setup also comes with a software automating the chip pump-down and carrier gas exchange procedures. The procedures described in Appendix \ref{app:instructions} for the other two setups are thus simplified to pressing a button.
-
+In the spirit of making this Thesis useful to my colleagues, Appendix \ref{app:instructions} also describes procedures for changing chip and changing carrier gas for each of these setups with reference to the valve diagrams.
 
 \subsection{Example experiments: RHE potential measurement and CO stripping}\label{subsec:examples}
 Here I show two examples of common electrochemistry experiments as seen through the window of chip EC-MS. These two experiments also demonstrate the utility of the gas-exchange functionality, and happen to be quite interesting when instead done in isotope-labeled electrolyte. Isotope-labeled versions of these two experiments are shown later in this Chapter, in Subsections \ref{subsec:isotope_RHE} and \ref{subsec:isotope_CO2}.
@@ -131,9 +80,9 @@ The first experiment is a measurement of the reference electrode potential on th
 \end{equation}
 This situation can be easily created in a chip EC-MS setup using hydrogen as the carrier gas and a platinum electrode as the sample, since platinum is an excellent catalyst for the HER/HOR\cite{Nørskov2005a, Kemppainen2015, Tymoczko2016}. 
 
-\begin{figure}[h!]
+\begin{figure}[b!]
 	\centering
-	\includegraphics[width=\textwidth]{02_Tools/fig/RHE_calibration.png}
+	\includegraphics[width=1\textwidth]{02_Tools/fig/RHE_calibration.png}
 	\caption{RHE calibration experiment using a polycrystalline platinum electrode in 0.1 M \ch{HClO4}. \textbf{(a)} EC-MS plot with mass spectrometer signals in the top panel and the concurrent electrochemical data in the lower panel. \textbf{(b)} A zoom-in on the time at which the carrier gas is switched from helium to hydrogen while the electrode is at OCP, showing the electrode potential (black, left y-axis) co-plotted with the m/z=2 signal (blue, right y-axis)}.
 	\label{fig:RHE_cal}
 \end{figure}
@@ -145,7 +94,9 @@ Starting from the left: the platinum electrode is cycled between -0.7 and +0.7 V
 
 The example in Figure \ref{fig:RHE_cal} is unfortunately not the most elegant gas exchange, as indicated by the inflection points in the MS signals as \ch{H2} replaces \ch{He} in Figure \ref{fig:RHE_cal}a. (This results from an overpressure in the gas manifold before opening Valve 8 in Figure \ref{fig:sniffer}, which causes turbulence and gas mixing in the carrier gas inlet volume.) Figure \ref{fig:RHE_cal}b shows the simultaneous change in the \ch{H2} signal and electrode potential during the gas switch. The electrode potential becomes stable to within a few millivolts just 10 seconds after the switch, but the last $\approx$ 2 mV to the RHE potential of -0.717 V vs the reference electrode take about 100 s (inset). This is, nonetheless, a much faster RHE measurement than can be accomplished when a macroscopic amount of electrolyte, for example in an H cell, needs to be fully purged with hydrogen. Such RHE measurements are used routinely to calibrate the reference electrode potential on the RHE scale in a new electrolyte.
 
-\begin{figure}[h!]
+\vspace{5mm}
+
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=\textwidth]{02_Tools/fig/Trimarco2018_fig03.png}
 	\caption{Experiments showing HER, OER, CO oxidation, and CO stripping on Pt in 1.0 M \ch{HClO4}.  \textbf{(a)} and \textbf{(c)} show EC-MS plots and \textbf{(b)} and \textbf{(d)} each show two parts of the respective data set co-plotted against potential. \ch{He}, \ch{CO}, \ch{H2}, \ch{O2}, and \ch{CO2} fluxes were obtained by calibrating the m/z=4, 28, 2, 32, and 44 signals, respectively, according to the procedures described in Section \ref{sec:quantification}. For a detailed discussion, see Paper \ref{Trimarco2018}.}
@@ -183,7 +134,7 @@ The question then comes up:
 \begin{question}
 	With respect to the sensitivity of product detection, when is it advantageous to use chip EC-MS and when is it advantageous to use conventional DEMS?
 \end{question}
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=\textwidth]{02_Tools/fig/fig07_old.png}
 	\caption{Model comparing the sensitivity of chip EC-MS to conventional DEMS via the collection efficiency in a hypothetical flow setup. Adapted from Paper \ref{Trimarco2018}.}
 	\label{fig:sensitivity}
@@ -195,7 +146,7 @@ Thus, chip EC-MS is not ideal for, e.g., \textit{in-operando} studies of \ch{CO2
 \vspace{5mm}
 Furthermore, while the sensitivity and ability to quickly dose reactant gases are major advantages for chip EC-MS in fundamental studies, it should not be considered a full substitute for a rotating disk electrode (RDE) setup or other setup optimized for cyclic voltammatry. It can sometimes be challenging to get good cyclic voltammagrams in the setup. Figure \ref{fig:current_distribution}a shows electrochemistry data from Figure \ref{fig:RHE_cal}a plotted against potential. The magenta cycle is with He as the carrier gas, and the blue cycle is with \ch{H2} as the carrier gas. The \ch{H2} CV is shifted up with respect to the \ch{He} CV due to a mass-transport-limited hydrogen oxidation current until the platinum surface starts to oxidize at 0.9 V vs RHE and becomes less active for hydrogen oxidation. This all makes sense, but the CV's are dominated by an artifact in the start of the anodic scan: rapid oscilations of current and potential. 
 
-\begin{figure}[h!]
+\begin{figure}[t]
 	\includegraphics[width=\textwidth]{02_Tools/fig/nonideal_current_distribution.png}
 	\caption{\textbf{(a)} CV's in He (magenta) and \ch{H2} from Figure \ref{fig:RHE_cal}. The squiggles are the result of oscillations caused, in part, by electrolytic resistance accross the surface of the sample. \textbf{(b)} Schematic diagrams of electrode connections to the working volume, indicating that while the conventional ohmic resistance is zero, the resistance within the working volume means that the electrochemical potential is not uniform; adapted from my Master's Thesis\cite{Scott2016_MSc}}.
 	\label{fig:current_distribution}

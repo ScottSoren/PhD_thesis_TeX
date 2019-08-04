@@ -1,11 +1,31 @@
 
-\chapter{Setup Instructions}\label{app:instructions}
+\chapter{Setup and technique details and instructions}\label{app:instructions}
+
 
 The following procedures assume that the setup, hardware configuration, and Software interfaces have not changed since the publishing of this Thesis.
 
 \section{Sniffer setup at DTU}\label{app:sniffer}
 
-Component numbers refer to Figure \ref{fig:sniffer} on page \pageref{fig:sniffer}.
+
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{02_Tools/fig/setup_sniffer.png}
+	\caption{Valve diagram of EC-MS setup at DTU. Adapted from Paper \ref{Trimarco2018}. Red: components installed since that publication. Green: The 6-way valve was removed since then as well as the pneumatic valves before the pressure controllers, which were re-purposed. Blue: The interface block, as well as the valve right before it, were replaced to minimize the intervening volume, enabling faster exchange of gases.}
+	\label{fig:sniffer}
+\end{figure}
+Figure \ref{fig:sniffer} shows a valve diagram of the sniffer setup. Most of this setup was built during Daniel Trimarco's PhD project\cite{Trimarco2017_PhD}, and described in Paper \ref{Trimarco2018}. Colors indicate the parts that I have removed (green) or added (red) since Paper \ref{Trimarco2018}'s publication.
+
+On the left of the diagram are mass flow controllers (MFC's) which can be used to switch between up to four gases at time. Switching between gases sharing an MFC, f.eks. Ar and He, requires pumping down behind the MFC through a line not shown. Moving right, we refer to the volume between Valves 7, 8, 9, 10, 11, and 12 and PC 1 as the \textit{gas manifold}. The gas manifold can be evacuated through Valve 7 and filled up from one of the MFC's while regulating the pressure with a pressure controller (PC), PC1.
+
+Carrier gas from the gas manifold enters the interface block via Valve 8. The interface block guides it through the carrier gas reservoir channel of the chip, from which it fills the chip's sampling volume and saturates the electrochemical environment. Fast carrier gas exchange thus requires that the volume between valve 8 and the chip, the \textit{carrier gas inlet volume} is as small as possible. This is because the carrier gas inlet volume, unlike the gas manifold, cannot be pumped down, as the resulting vacuum in the sampling volume of the chip would suck in electrolyte. The design of the carrier gas inlet volume can also be optimized with regards to flow patterns to minimize mixing of the old and new carrier gas. 
+
+We refer to the volume between PC1, PC2, and Valves 1, 5, 6, and 7 as the \textit{pumping manifold}. There are actually three possible ways to pump on the pumping manifold: (1) Directly to the \textit{roughing pump} (RP) through Valve 6, or (2-3) through a buffer volume and then a \textit{turbo molecular pump} (TMP or just turbo pump) via either a (2) valve 2 and a needle valve or (3) a gate valve. 
+%Of these options, the direct roughing pump connection is the only one that can quickly remove a large amount of gas, as this would damage the turbo pump. Valve 14 should be closed while gas is fed directly to the roughing pump, as the pressure behind the turbo pump must also be kept low during operation. On the other hand, the turbo pump is required to reach high vacuum, which it can do slowly for a moderate amount of gas through the needle valve or quickly for a small amount of gas through the gate valve.
+
+During operation, carrier gas is flowing from the gas manifold to the pumping manifold through the chip, and its pressure is regulated by PC2, which is set to 1 bar for all of the experiments in this Thesis. Excess carrier gas flows through PC2 to the pumping manifold where it is ultimately removed through the roughing pump, typically via the buffer volume and needle valve, so that valve 14 can remain open.
+
+When a new chip is installed, the \textit{post-capillary volume} bound by the chip, Valve 13, and Valve 5 is vented to atmospheric pressure, and must be pumped down to high vacuum before connecting the experiment to the mass spectrometer. The mass spectrometer is always held at high vacuum by its own designated turbo and roughing pumps. The mass spectrometer of the sniffer setup is a Pfeiffer QMA125.
+
+The procedures for chip pump-down and carrier gas exchange are described below.
 
 An unusual feature of the sniffer setup, as mentioned in that Section, is that there are three ways to pump on the pumping manifold. Of these options, the direct roughing pump connection is the only one that can quickly remove a large amount of gas, as this would damage the turbo pump. Valve 14 should be closed while gas is fed directly to the roughing pump, as the pressure behind the turbo pump must also be kept low during operation. On the other hand, the turbo pump is required to reach high vacuum, which it can do slowly for a moderate amount of gas through the needle valve or quickly for a small amount of gas through the gate valve.
 
@@ -65,44 +85,18 @@ The procedure on this setup to change carrier gases is as follows. We will use t
 \end{enumerate}
 
 
-\subsection{Electrolyte sampling}\label{app:sampling}
-
-It is possible with the sniffer setup to take electrolyte samples out under potential control for analysis with ICP-MS. This requires an electrolyte delivery bottle on one side and a syringe on the other side, as shown in Figure \ref{fig:ICPMS} on Page \pageref{fig:ICPMS}. To set this up (items 1 through 4 are the standard procedure):
-\begin{enumerate}
-	\item Align the sample in the cell
-	
-	\item Mount the cell on the interface block
-	
-	\item Fill the cell with electrolyte using the syringe
-	
-	\item Insert the RE and CE glassware when the electrolyte forms a miniscus in the Luer fitting
-	
-	\item When there is a miniscus of electrolyte coming out of the outlet (male Luer fitting), very quickly open the valve on the electrolyte delivery tower and push the tube onto the Luer fitting, connecting the tower and the cell. This should be done quickly to minimize spilling. Clean up any spill right a way with a paper wipe.
-	
-	\item Close the valve.
-\end{enumerate}
-
-It is important that valve is open while the electrolyte delivery tower is connected the cell to avoid developing an overpressure which could breach the chip. It is good for it to be closed during the experiment, or the pressure of the electrolyte above the valve can push electrolyte into the cell and exascerbate any leaks that might be present.
-
-To take an electrolyte sample:
-\begin{enumerate}
-\item Open the valve to the electrolyte delivery tower
-
-\item Pull 0.5 ml of electrolyte with the syringe. Do so as steadily as possible to avoid making an underpressure which could pull carrier gas from the chip into the working volume. Bubbles are the enemy!
-
-\item Remove the syringe and close the valve of the electrolyte delivery tower as fast as possible to minimize spillage. Clean up any spillage.
-
-\item Empty the syringe into an eppendorf tube or other storage. This is your sample for ICP-MS.
-
-\item Very quickly open the valve to the electrolyte delivery tower and quickly re-insert the syringe.
-
-\item Close the valve. You're ready to take the next sample when the time comes.
-\end{enumerate}
-
-
 \section{ECMS-200A at CAS in Fuzhou}\label{app:Fuzhou}
 
-Component numbers refer to Figure \ref{fig:Fuzhou} on page \pageref{fig:Fuzhou}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{02_Tools/fig/setup_Fuzhou.png}
+	\caption{Valve diagram of EC-MS setup at Fuzhou. In reality, at the time of writing this thesis, the pressure controller is actually a modified pressure regulator, which works but is not as stable.}
+	\label{fig:Fuzhou}
+\end{figure}
+
+The sniffer setup described above can be considered a ``delux setup'' with an excess of components to maximize functionality. The group in Fuzhou asked me to design a ``budget setup'' which captured the central advantages of chip EC-MS with as few components as possible. They then built my design, shown in Figure \ref{fig:Fuzhou} with the outside help from a Chinese mass spectrometer company, Quantang Instruments. Much to my frustruation, Quantang built a box around the valve system, making it quite tedious to make changes to the system, and put their logo and the name ECMS200A on the box.
+
+All of the concepts are the same as for the sniffer setup, but the operation is different. The procedures for chip pump-down and carrier gas exchange are described in Appendix \ref{app:Fuzhou}. The cost of having one less Turbo pump is the need to wait for long pumping periods and to turn off the filament of the mass spectrometer when changing chips. The carrier gas exchange procedure is actually slightly simpler than that of the sniffer setup and saves three MFC's and a PC. The only disadvantage is that, with only one MFC, it is not easy to prepare a controlled gas mixture (a functionality I have rarely used on the sniffer setup).
 
 \subsection{Changing chip}
 The procedure to change chip is as follows:
@@ -143,6 +137,19 @@ The procedure for changing carrier gases (with He to CO as an example) is as fol
 	
 	\item Set the CO flow to 1 ml/min. The setup is now in steady operation in CO carrier gas.
 \end{enumerate}
+
+
+
+\section{Spectro Inlets}\label{app:spectro}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{02_Tools/fig/spectro.png}
+	\caption{Photos of the setup at Spectro Inlets ApS. From their website: \url{https://spectroinlets.com/}}
+	\label{fig:spectro}
+\end{figure}
+Finally, I should mention that there is now a commercially available setup which combines the best of both worlds: The functionality of the Sniffer setup and the simplicity and compactness of the ECMS200A. This is made possible in part due to some custom vacuum components. The setup, sold by Spectro Inlets ApS, is shown in the photographs in Figure \ref{fig:spectro}. I have been involved in conversations aiding the development of this setup, as a kind of test user, but can't go to detail here on its design. The Spectro Inlets setup also comes with a software automating the chip pump-down and carrier gas exchange procedures. The procedures described in Appendix \ref{app:instructions} for the other two setups are thus simplified to pressing a button.
+
 
 
 \section{Sputtering \ch{Ru^{18}O2} and \ch{Ir^{18}O2}}\label{app:sputter}
@@ -192,3 +199,61 @@ The sputter deposition  process for nominally 25 (10) nm of \ch{Ru^{18}O2} (\ch{
 	
 	\item Let the samples cool before taking them out through the load lock.
 \end{enumerate}
+
+
+\section{ICP-MS}\label{app:sampling}
+
+
+Briefly, the electrolyte in the cell is sucked out with a syringe while new electrolyte flows in from an electrolyte delivery tower. The old electrolyte stored in an Eppendorf tube and the syringe is re-inserted. This results in electrolyte samples of $\approx 0.5$ ml in Eppendorf tubes. 
+
+For study with ICP-MS, the raw samples are first diluted to a standard volume of 1 ml with 2\% \ch{HNO3}, 0.1 ml of this is then diluted to 10 ml with 2\% \ch{HNO3}, which is the ICP-MS sample. The concentration of this ICP-MS sample is then as if all of the metal dissolved during the experiment were diluted in 100 ml. The amount of metal $n^i$ (typically stated in pmol) can then be determined from its mass concentration $c_m^i$ in the ICP-MS sample (typically stated in $\mu$g per l which is numerically equivalent to ppb) by
+\begin{equation}
+n^i = 100\,\text{[ml]}\frac{c_m^i}{M^i}\,,\label{eq:ppb_to_pmol}
+\end{equation}
+where $M^i$ is the molar mass of $i$.
+
+To determine $c_m^i$ from the raw signal (in counts) requires calibration. A dilution series (typically 0.1, 1, 10, and 100 $\mu$g/l) is prepared from a standard stock solution. These are measured together with the samples and intervening measurements a blank solution (2\% \ch{HNO3} in water with no metals). The calibration curve is made by drawing a line of best fit through the counts vs concentrations of this dilution series on a log-log plot (the slope of this line should be 1). Typical calibration curves for Ir and Ru are shown in Figure \ref{fig:ICPMS_cal}. These calibration curves are made using the function \texttt{ICPMS\_calibration} of the \texttt{EC\_MS} python package (see Appendix \ref{app:EC_MS}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{02_Tools/fig/ICPMS_calibration_curves.png}
+	\caption{Calibration curves for ICP-MS detection of \textbf{(a)} Ir and \textbf{(b)} Ru. The top x-axes represents the amount of metal originally in a sample from the EC-MS setup, and is scaled to the bottom x-axis according to Equation \ref{eq:ppb_to_pmol}. The dashed black line is the mean number of counts in blank measurements, and the dotted black line is that mean plus three times the standard deviation of the number of counts in the blank measurement. The detection limit, defined as where the latter intercepts the calibration curve, is indicated with a green vertical line.}
+	\label{fig:ICPMS_cal}
+\end{figure}
+
+The detection limit is defined as the amount corresponding to the counts of the blank measurements plus three times the standard deviation of counts the blank measurements\cite{Harris2010}. This is 1.4 pmol for Ir and 3.1 pmol for Ru.
+
+
+\subsection{Electrolyte sampling}
+It is possible with the sniffer setup to take electrolyte samples out under potential control for analysis with ICP-MS. This requires an electrolyte delivery bottle on one side and a syringe on the other side, as shown in Figure \ref{fig:ICPMS} on Page \pageref{fig:ICPMS}. To set this up (items 1 through 4 are the standard procedure):
+\begin{enumerate}
+	\item Align the sample in the cell
+	
+	\item Mount the cell on the interface block
+	
+	\item Fill the cell with electrolyte using the syringe
+	
+	\item Insert the RE and CE glassware when the electrolyte forms a miniscus in the Luer fitting
+	
+	\item When there is a miniscus of electrolyte coming out of the outlet (male Luer fitting), very quickly open the valve on the electrolyte delivery tower and push the tube onto the Luer fitting, connecting the tower and the cell. This should be done quickly to minimize spilling. Clean up any spill right a way with a paper wipe.
+	
+	\item Close the valve.
+\end{enumerate}
+
+It is important that valve is open while the electrolyte delivery tower is connected the cell to avoid developing an overpressure which could breach the chip. It is good for it to be closed during the experiment, or the pressure of the electrolyte above the valve can push electrolyte into the cell and exascerbate any leaks that might be present.
+
+To take an electrolyte sample:
+\begin{enumerate}
+	\item Open the valve to the electrolyte delivery tower
+	
+	\item Pull 0.5 ml of electrolyte with the syringe. Do so as steadily as possible to avoid making an underpressure which could pull carrier gas from the chip into the working volume. Bubbles are the enemy!
+	
+	\item Remove the syringe and close the valve of the electrolyte delivery tower as fast as possible to minimize spillage. Clean up any spillage.
+	
+	\item Empty the syringe into an eppendorf tube or other storage. This is your sample for ICP-MS.
+	
+	\item Very quickly open the valve to the electrolyte delivery tower and quickly re-insert the syringe.
+	
+	\item Close the valve. You're ready to take the next sample when the time comes.
+\end{enumerate}
+
